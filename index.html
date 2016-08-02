@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Coding Practices</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Suman Kunwar">
+		<meta name="author" content="Suman Kunwar">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" />
+		<link rel="stylesheet" href="css/reveal.min.css" />
+		<link rel="stylesheet" id="theme" href="css/theme/beige.css" />
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style type="text/css">
+			pre { box-shadow: 0 0 !important; }
+			code { box-shadow: 0 0 6px rgba(0, 0, 0, .3);  }
+		</style>
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<style>
+			.elgreg-slides img {
+				max-width: 50%;
+			}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h1>
+				    Coding Practices
+					</h1>
+						<p> Marcellin Nshimiyimana , Suman Kunwar</p>
+					</section>
+					<section>
+						<h2>About the Speaker</h2>
+						<div>
+							<ul>
+								<li> Marcellin Nshimiyimana</li>
+							  <ul >
+										<li> Software Engineer @<a href="http://fusemachines.com/">Fusemachines </a></li>
+									<!-- <li> Founder <a href="http://katiparxa.com/">Katiparxa </a></li>
+									<li> UI/UX, Interactive Design  </li>
+									<li> 4+ Industry Experience </li>
+									<li> Vedio Tutorails 800+ <a href="https://www.youtube.com/channel/UCOL9ZxzRX9lIvOliY_oz0Ng"> Design Code Blade</a></li> -->
+								</ul>
+								<br/>
+								<li> Suman Kunwar</li>
+								<ul>
+									<li> Software Engineer @<a href="http://fusemachines.com/">Fusemachines </a></li>
+									<!-- <li> Founder <a href="http://travelmynepal.com/">Travel My Nepal </a></li>
+									<li> Full Stack Developer / Open Source Evangelist </li>
+									<li> 3+ Industry Experience </li>
+									<li> 52k+ Impacts(Stack Overflow), 6+ Open Source Contribution, Co-Writer <a href="https://www.gitbook.com/book/gitbookio/javascript/details">Learn Javascript </a> </li> -->
+								</ul>
+
+								<!-- <li>Open Source Enthusiast</li>
+								<li>Soon-to-be Author</li>
+								<li>Loves the word HTML5</li> -->
+							</ul>
+							<div style="text-align: left;">
+								<br />
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h2>
+					 Look you find it everywhere ..<br />
+					</h2>
+					<img src="images/bugs.jpg" alt="" />
+					<!-- <ul>
+						<li><strong>Abstractions</strong></li>
+						<li><strong>Expressiveness</strong></li>
+						<li><strong>Cross-browser</strong></li>
+						<li><strong>Highly complete documentation</strong></li>
+					</ul> -->
+				</section>
+				<section>
+					<h2>
+					No worries i will fix it ..<br />
+					</h2>
+					<img src="images/fixit.jpg" alt="" />
+					<!-- <ul>
+						<li><strong>Abstractions</strong></li>
+						<li><strong>Expressiveness</strong></li>
+						<li><strong>Cross-browser</strong></li>
+						<li><strong>Highly complete documentation</strong></li>
+					</ul> -->
+				</section>
+				<section>
+					<h2>Fix broken stuffs to advance to the next level </h2>
+					<ul>
+						<li><strong>Understanding the problem</strong></li>
+						<li><strong>Code Analaysis </strong></li>
+						<li><strong>Implementation </strong></li>
+						<!-- <li><strong>Let me explain you my problem.</strong></li>
+						<li><strong>I will do a test.</strong></li>
+						<li><strong>It's broken.</strong></li>
+						<li><strong>No worries i will fix it.</strong></li> -->
+						<!-- <li><strong>Won't believe see my test.</strong></li> -->
+					</ul>
+				</section>
+				<section>
+					<h1>Understanding the problem</h1>
+
+					<!-- <h5>It's okay i will fix it.</h5> -->
+				</section>
+				<section>
+					<h3>Problem Undersatnding</h3>
+					<ul>
+						<li> Able to understand and interpret in own word</li>
+						<!-- <li> able to know what needs to do</li> -->
+						<li>Writing test cases</li>
+					</ul>
+					<!-- <img src="images/problem.png" alt="" /> -->
+					<!-- <h3>Everywhere its broken.Stage, Beta now Production too. feel's so worried?</h3> -->
+
+					<!-- <h5>It's okay i will fix it.</h5> -->
+				</section>
+				<section>
+					<h3>Code Analysis</h3>
+					<ul>
+						<li> Debugging </li>
+						<li>Seeking help</li>
+					</ul>
+					<!-- <img src="images/problem.png" alt="" /> -->
+					<!-- <h3>Everywhere its broken.Stage, Beta now Production too. feel's so worried?</h3> -->
+
+					<!-- <h5>It's okay i will fix it.</h5> -->
+				</section>
+
+				<section>
+					<h1>Let's go through workflow</h1>
+				</section>
+				<section>
+					<img src="images/problem.png" alt="" />
+				</section>
+<section>
+					<h3>Write Test Case:</h3>
+					<pre>
+	<code>
+import { test } from 'qunit';
+import moduleForAcceptance from 'fuseprospector-web/tests/helpers/module-for-acceptance';
+
+moduleForAcceptance('Acceptance | overiden row checkbox should work');
+
+	/**
+		 * what is happening
+		 * - checkbox is selected, but user is not given to "Mark lead as ready to connect"
+		 * what should happen:
+		 * - row changes color
+		 * - actions menu appears (with a button "Mark as ready to connect" present)
+		 *
+		 * @NOTE this is a data bound test => only runs if there is at least one row with overiden errors
+		 */
+		test('click on the checkbox should trigger presence of move to ready to connect', assert => {
+		  visit('/sourcing/clean?size=50');
+
+			andThen(() => {
+		    	if(prerequisites(find)) {
+					// 1. make sure we are on the right page
+					assert.equal(currentURL(), '/sourcing/clean?size=50', 'sourcing/clean page should be open');
+
+					// 2. click on the checkbox
+					let undoOverride = Ember.$(find('.ico.icon-undo')[0]);
+					let rowCheckbox = undoOverride.parent().parent().parent().parent().children('.checkbox_fixes').children('.ui-checkbox');
+					rowCheckbox.click();
+
+					andThen(() => {
+						// 3. check for the right correct behavior
+						let row = undoOverride.parent().parent().parent().parent();
+						// 3.a row changes the color
+						assert.ok(row.hasClass( 'selected-row' ), 'row should have a "selected-row" css class');
+
+						// 3.b "move to ready to connect" shows up
+						let actionButton = find('.data-head-left-bar > .inline-list > .button-group');
+						assert.ok(actionButton.html().search('Mark as Ready to Connect') >= 0, 'mark as ready to connect button should be present');
+
+					});
+
+				} else {
+					assert.ok(true); // ignore this test if pre-requisite is not fulfilled
+				}
+		    });
+
+		});
+		/**
+		 * Is there a row with undo button?
+		 */
+		function prerequisites(find) {
+			let isContainsData = find('tbody tr').length > 0;
+		    // look if it contains data or not
+		    return isContainsData && !!(find('.ico.icon-undo')[0]);
+		}
+	</code>
+			    </pre>
+				</section>
+				<section>
+					<h1>This is fine...</h1>
+					<br />
+					<ul>
+						<li>If you run the test and its broken it show's error</li>
+						<li>If your test run without error then its valid</li>
+						<li>In this case it returns an error</li>
+					</ul>
+				</section>
+				<section>
+					<img src="images/error.png" alt="" />
+				</section>
+				<section>
+					<h2>Fix the code:</h2>
+
+					<pre>
+	<code>
+
+
+if(key && typeof value === 'boolean') { // leads.@each.checked trigger
+...
+//our code
+let overrideErrorLeads = this.get('leads').filterBy('override', true);
+Ember.Logger.log('====== test check key value  ======');
+Ember.Logger.log(key, value);
+Ember.Logger.log('====== test check key value ======');
+// if (typeof value === 'boolean') {
+overrideErrorLeads.setEach('checked', value);
+overrideErrorLeads.setEach('isdownload', value);
+// }
+return value;
+} else if (key) { // leads.@each.errors trigger
+Ember.Logger.log('====== test check only key ======');
+Ember.Logger.log(key, value);
+Ember.Logger.log('====== test check only key ======');
+//individual checked
+var toggles = this.get('leads');
+if (this.get('leads')) {
+  if (this.get('leads').filterBy('checked', true).get('length') > 0) {
+		this.set('isdownload', true);
+		} else {
+		this.set('isdownload', false);
+		}
+...
+  <!-- // IIFE - Immediately Invoked Function Expression
+  (function($, window, document) {
+
+    // The $ is now locally scoped
+
+   // Listen for the jQuery ready event on the document
+   $(function() {
+
+     // The DOM is ready!
+
+   });
+
+   // The rest of the code goes here!
+
+  }(window.jQuery, window, document));
+  // The global jQuery object is passed as a parameter -->
+	</code>
+			        <!-- </pre>
+<a href="http://jsbin.com/onahin/4/edit" target="_blank">jsbin example</a>
+				</section>
+				<section>
+					<h2>This is best:</h2>
+
+					<pre> -->
+	<!-- <code> -->
+  <!-- // IIFE - Immediately Invoked Function Expression
+  (function(yourcode) {
+
+    // The global jQuery object is passed as a parameter
+  	yourcode(window.jQuery, window, document);
+
+  }(function($, window, document) {
+
+    // The $ is now locally scoped
+
+   // Listen for the jQuery ready event on the document
+   $(function() {
+
+     // The DOM is ready!
+
+   });
+
+   // The rest of the code goes here!
+
+  }
+  }));
+	</code>
+			        </pre>
+			        <a href="http://jsbin.com/aseyaz/4/edit" target="_blank">jsbin example</a>
+				</section>
+				<section>
+				<h1>DOM manipulation</h1>
+				</section>
+				<section>
+					<h3>Most Projects do this:</h3>
+					<pre>
+	<code>
+  // Set's an element's title attribute using it's current text
+  $(".container input#elem").attr("title", $(".container input#elem").text());
+
+  // Set's an element's text color to red
+  $(".container input#elem").css("color", "red");
+
+  // Makes the element fade out
+  $(".container input#elem").fadeOut();
+
+	</code>
+			        </pre> -->
+			</section>
+				<section>
+					<img src="images/success.png" alt="" />
+					<!-- <h1>This is fine...</h1>
+					<br />
+					<ul>
+						<li>If you like repeating yourself</li>
+						<li>If you do not care about performance</li>
+						<li>If you don't care about best practices</li>
+					</ul> -->
+				</section>
+					<!-- <section>
+					<h2>This is better:</h2>
+
+					<pre>
+	<code>
+  // Set's an element's title attribute using it's current text
+  $("#elem").attr("title", $("#elem").text());
+
+  // Set's an element's text color to red
+  $("#elem").css("color", "red");
+
+  // Makes the element fade out
+  $("#elem").fadeOut();
+	</code>
+			        </pre>
+			        <h3>Simplify your selectors</h3>
+					</section>
+					<section>
+					<h2>This is best:</h2>
+
+					<pre>
+	<code>
+  // Stores the live DOM element inside of a variable
+  var elem = $("#elem");
+
+  // Set's an element's title attribute using it's current text
+  elem.attr("title", elem.text());
+
+  // Set's an element's text color to red
+  elem.css("color", "red");
+
+  // Makes the element fade out
+  elem.fadeOut();
+	</code>
+			        </pre>
+			        <h3>Cache your selectors in variables</h3>
+			      </section>
+			    <section>
+					<p>or use a shorter version...</p>
+					<pre>
+	<code>
+  // Stores the live DOM element inside of a variable
+  var elem = $("#elem");
+
+  // Chaining
+  elem.attr("title", elem.text()).css("color", "red").fadeOut();
+
+	</code>
+			    </pre>
+			    <h3>Chaining</h3>
+					</section>
+<section>
+	<h1>Another DOM Example</h1>
+</section>
+				<section>
+					<h3>Most Projects do this:</h3>
+					<pre>
+	<code>
+  // Dynamically building an unordered list from an array
+  var localArr = ["Greg", "Peter", "Kyle", "Danny", "Mark"],
+  	list = $("ul.people");
+
+  $.each(localArr, function(index, value) {
+
+    list.append("&lt;li id=" + index + "&gt;" + value + "&lt;/li>");
+
+  });
+
+	</code>
+			        </pre>
+			</section>
+				<section>
+					<h1>This is fine...</h1>
+					<br />
+					<ul>
+						<li>If you like repeatedly appending elements to the DOM</li>
+						<li>If you like slow web apps</li>
+						<li>If you don't care about best practices</li>
+					</ul>
+				</section>
+					<section>
+					<h2>This is best:</h2>
+
+					<pre>
+	<code>
+  // Dynamically building an unordered list from an array
+  var localArr = ["Greg", "Peter", "Kyle", "Danny", "Mark"],
+  	list = $("ul.people"),
+  	dynamicItems = "";
+
+  $.each(localArr, function(index, value) {
+
+    dynamicItems += "&lt;li id=" + index + "&gt;" + value + "&lt;/li>";
+
+  });
+
+  list.append(dynamicItems);
+	</code>
+			        </pre>
+			        <h3>Append once</h3>
+					</section>
+
+					<section>
+	<h1>Event Handling</h1>
+					</section>
+<section>
+					<h3>Most Projects do this:</h3>
+					<pre>
+	<code>
+
+  $("#longlist li").on("mouseenter", function() {
+
+    $(this).text("Click me!");
+
+  });
+
+  $("#longlist li").on("click", function() {
+
+    $(this).text("Why did you click me?!");
+
+  });
+
+	</code>
+			        </pre>
+			</section>
+				<section>
+					<h1>This is fine...</h1>
+					<br />
+					<ul>
+						<li>If you like using a lot of memory for event handlers</li>
+						<li>If you don't have many DOM elements</li>
+						<li>If you don't care about best practices</li>
+					</ul>
+				</section>
+					<section>
+					<h2>This is better:</h2>
+
+					<pre>
+	<code>
+  var listItems = $("#longlist li");
+  listItems.on({
+
+    "mouseenter": function() {
+
+      $(this).text("Click me!");
+
+    },
+
+    "click": function() {
+
+      $(this).text("Why did you click me?!");
+
+    }
+
+  });
+	</code>
+			        </pre>
+			        <h3>DRY (Don't Repeat Yourself)</h3>
+					</section>
+					<section>
+					<h2>This is best:</h2>
+
+					<pre>
+	<code>
+  var list = $("#longlist");
+
+  list.on("mouseenter", "li", function(){
+
+    $(this).text("Click me!");
+
+  });
+
+  list.on("click", "li", function() {
+
+    $(this).text("Why did you click me?!");
+
+  });
+	</code>
+			        </pre>
+			        <h3>Event Delegation</h3>
+			      </section>
+
+					<section>
+	<h1>AJAX</h1>
+					</section>
+<section>
+					<h3>Most Projects do this:</h3>
+					<pre>
+	<code>
+  function getName(personid) {
+    var dynamicData = {};
+    dynamicData["id"] = personID;
+    $.ajax({
+      url: "getName.php",
+      type: "get",
+      data: dynamicData,
+      success: function(data) {
+        // Updates the UI based the ajax result
+        $(".person-name").text(data.name);
+      }
+    });
+  }
+
+  getName("2342342");
+
+	</code>
+			        </pre>
+			</section>
+				<section>
+					<h1>This is fine...</h1>
+					<br />
+					<ul>
+						<li>If you like inflexible code</li>
+						<li>If you don't have to worry about multiple ajax requests</li>
+						<li>If you don't care about best practices</li>
+					</ul>
+				</section>
+					<section>
+					<h2>This is best:</h2>
+
+					<pre>
+	<code>
+  function getName(personid) {
+    var dynamicData = {};
+    dynamicData["id"] = personID;
+    return $.ajax({
+      url: "getName.php",
+      type: "get",
+      data: dynamicData
+    });
+  }
+
+  getName("2342342").done(function(data) {
+    // Updates the UI based the ajax result
+    $(".person-name").text(data.name);
+  });
+	</code>
+			        </pre>
+			        <h3>Uses Promises, Very Flexible</h3>
+					</section>
+<section>
+	<h1>What are you interested In?</h1>
+</section>
+<section>
+	<h1>Possible Topics</h1>
+					<ul>
+						<li>jQuery and CSS</li>
+						<li>jQuery Custom Events - Pub/Sub</li>
+						<li>jQuery and Object Literals</li>
+						<li>jQuery Utility Functions</li>
+						<li>jQuery Event Namespaces</li>
+						<li>The future of jQuery</li>
+						<li>jQuery Event Namespaces</li>
+						<li>Authoring jQuery Plugins</li>
+						<li>Return False vs Event.preventDefault()</li>
+						<li>Animation with Promises</li>
+					</ul>
+</section> -->
+<section>
+	<h1> Any Questions ?</h1>
+</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
