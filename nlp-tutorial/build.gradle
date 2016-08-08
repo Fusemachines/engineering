@@ -1,0 +1,47 @@
+buildscript {
+	ext {
+		springBootVersion = '1.4.0.M3'
+	}
+	repositories {
+		mavenCentral()
+		maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot' 
+
+jar {
+	baseName = 'nlp-tutorial'
+	version = '0.0.1'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+	maven { url "http://mvn.fusemachines.com.s3-website-us-east-1.amazonaws.com/maven" }
+}
+
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web"){
+		exclude module : 'spring-boot-starter-logging'
+	}
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile('com.fusemachines.fusenlp:fuse-nlp:1.0.6')
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.4'
+}
+
+
+
