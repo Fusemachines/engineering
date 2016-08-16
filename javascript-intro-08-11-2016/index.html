@@ -1,0 +1,2649 @@
+
+<!DOCTYPE html>
+	<html class="sl-root decks fullscreen">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4fd2e9786b","applicationID":"1563900","transactionName":"cApZREQKWl9XFxZQVlAORB9QEFpfQQZLUVZd","queueTime":0,"applicationTime":32,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vg4DUVVWGwIFUlJbBwE="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-963.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script>
+		<title>concise JavaScript: Slides</title>
+		<meta name="description" content="Slides">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link href="css/consise/slides-1df814f963530a8557bab503c81c1049.css" media="all" rel="stylesheet" />
+		<link href="css/consise/application-10eeb5b8103fae12de05831bc2c86fdf.css" media="all" rel="stylesheet" />
+		<link href="css/consise/deck-v2-d6eda549f4bff4e45dd0403e6bbb5eed.css" media="all" rel="stylesheet" />
+
+
+
+<style id="user-css-output" type="text/css"></style>
+		<meta content="authenticity_token" name="csrf-param" />
+<meta content="kNwBUtW7FUXWCkN6lGplu4YUHlh7tJ9UHOWQOEZrkfo=" name="csrf-token" />
+
+		<!--[if lt IE 9]>
+    <script src="http://assets.slid.es/assets/html5shiv-b51d49ab0e89834a02ffce4a59905afb.js"></script>
+<![endif]-->
+	</head>
+	<body class="reveal-viewport theme-font-news theme-color-sand-blue">
+		<div class="reveal">
+			<div class="slides">
+
+		<section>
+			<section>
+					<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 172px; height: auto;" data-block-id="dfd4ccf9ab9e48a3f4a6c32f5bbc04c7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1><span style="font-size:96px"> JavaScript <span style="color:#A9A9A9">for the web</span> </span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="601a3d7cf84152b185713e3c5ad7d0a4" style="height: auto; min-width: 30px; min-height: 30px; width: 803px; left: 122px; top: 450px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; color: rgb(68, 68, 68);">
+<p>
+	The must-know concepts for people who write JavaScript code that runs in a browser.<br>
+</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="70a78deda44a297eb7ad9c7b964f9f3a" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 296px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(182, 215, 168); font-size: 70%; text-align: center;">
+<pre style="text-align:center">Marcellin Nshimiyiman, Aug 2016
+mars &lt;at&gt; fusemachines.com
+Licensed under CC BY-NC-SA
+</pre>
+</div></div>
+</section>
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="cd88612ad466d13dbcc2b60be13953eb">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255);">
+			<h1> About the Author </h1>
+			<ul>
+				<li> Marcellin Nshimiyimana </li>
+				<li> Software Engineer @<a href="http://fusemachines.com/">Fusemachines </a></li>
+				<!-- <ul > -->
+					<!-- <li> Blog @<a href="http://nshimiye.com/blog/"> Daily </a></li> -->
+					<!-- <li> Founder <a href="http://katiparxa.com/">Katiparxa </a></li>
+					<li> UI/UX, Interactive Design  </li>
+					<li> 4+ Industry Experience </li>
+					<li> Vedio Tutorails 800+ <a href="https://www.youtube.com/channel/UCOL9ZxzRX9lIvOliY_oz0Ng"> Design Code Blade</a></li> -->
+				<!-- </ul> -->
+				<!-- <li>Open Source Enthusiast</li>
+				<li>Soon-to-be Author</li>
+				<li>Loves the word HTML5</li> -->
+			</ul>
+		</div>
+	</div>
+</section>
+
+</section>
+
+
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="124ed75fa095355be8bbb68158b0d114" style="height: auto; min-width: 30px; min-height: 30px; width: 828px; left: 98px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; font-size: 75%; color: rgb(102, 102, 102);">
+<pre>Hello world,
+
+These slides are not meant to teach you Programming, so if
+You have not written code in your life, you should first
+try other programing tutorials then come back to this one.
+
+It is also expected that the audience know the basics of HTML5.
+
+Don't forget to check out the inspirational quote below!
+
+
+                    Let us get started ---&gt;</pre>
+</div></div>
+
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="b94b9f13ba32d75c5b2e04d98f752bdd" style="height: auto; min-width: 30px; min-height: 30px; width: 688px; left: 146px; top: 80px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left"><span style="font-size:80px">When referring to<br>
+<em><strong>JavaScript</strong></em>, it means<br>
+<strong><em>ECMAScript 5</em></strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="43094655d20b471940be7507a7913e42" style="height: auto; min-width: 30px; min-height: 30px; width: 722px; left: 119px; top: 480.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(102, 102, 102);">
+	<p>As of 2015, a new version (<em><strong>ES6</strong></em>) has been released but not all browser support it.</p>
+	<p>Check the slide below for what we are building!</p>
+</div></div>
+
+</section>
+
+<!-- START JavaScript Interpreter -->
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 148px; height: auto;" data-block-id="734b0043ddbbb14ebb25759876a225b7">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(238, 238, 238);">
+			<h1>
+				Intro<br>
+				JavaScript Interpreter
+			</h1>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					A JavaScript <span style="color:#B22222">Interpreter</span> is a computer program that
+					<strong><em>directly executes</em></strong> instructions written in a scripting language (JavaScript).
+					<!-- , without compiling them into a machine code. -->
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" data-block-id="0cc7bd579a47a01d1bca684a8a225f42" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 120px; top: 551px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+			<p>
+				<span style="font-size:25px">
+					Here <strong><em>interpreter</em></strong> is the same as <strong><em>engine</em></strong> or <strong><em>runtime</em></strong><br>
+					The difference among these terms, is beyond the scope of this tutorial.
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Definition</span></p>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 923px; left: 19px; top: 17px;" data-block-id="def5a00bed9ffe379573f53c587f23f7">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+			<p><span style="font-size:48px"><strong>List of JavaScript Interpreters</strong></span></p>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="code" style="width: 744px; height: 281px; left: 108px; top: 101px;" data-block-id="508be5e53982dce536e18f99c176240f">
+    <div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>V8: chrome browser
+
+Spidermonkey: Firefox
+
+JavaScriptCore: Safari
+
+Chakra (JavaScript): Microsoft Edge</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="ea94133ebee2522b17f2ee6f0c8d6b4d" style="height: auto; min-width: 30px; min-height: 30px; width: 930px; left: 15px; top: 451px;">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(102, 102, 102); font-size: 90%;">
+		<p>
+			<span style="color:rgb(17, 17, 17)">
+				You can use the "<strong><em>JavaScript Console</em></strong>" REPL provided by<br>
+				"<span style="color:#006400"><em><strong>Firefox Developer Tools</strong></em></span>" or
+				"<span style="color:#006400"><em><strong>Chrome Developer Tools</strong></em></span>" <br>
+				to write and test any small piece of JavaScript program.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+<!-- START exercise 1 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					Find at least one site that provides a JavaScript Interpreter.
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" data-block-id="0cc7bd579a47a01d1bca684a8a225f42" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 551px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+			<p>
+				<span style="font-size:32px">
+					Sample answer is provided below
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 1</span></p>
+		</div>
+	</div>
+</section>
+
+<section class="has-dark-background" data-background-color="#073763">
+	<p style="color: rgb(255, 255, 255);">
+		<br><br>
+		We will be using REPL online tool to test all written code, <br>
+		link is provided in the slide below
+	</p>
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="cd88612ad466d13dbcc2b60be13953eb">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255);">
+			<h1>Playground</h1>
+			<p> <a href="https://repl.it/">https://repl.it/</a> </p>
+		</div>
+	</div>
+</section>
+</section>
+<!-- END exercise 1 -->
+<!-- START exercise 2 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					Create a <em><i>webpage</em></i> in HTML5 that loads a <em><strong>JavaScript</em></strong> file.
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="code" style="width: 844px; height: 381px; left: 108px; top: 281px;" data-block-id="508be5e53982dce536e18f99c176240f">
+		<div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+				<pre class="javascript"><code>// content of the javascript file ( index.js )
+(function(){
+    'use strict';
+    var bodyElement, contentViewer, content;
+    if(!document.body) {
+        bodyElement = document.createElement("body");
+        document.body = bodyElement;
+    }
+    contentViewer = document.createElement("div");
+    document.body.appendChild(contentViewer);
+    content = document.createTextNode('Hackers learn by Making stuff!');
+    contentViewer.appendChild(content);
+    contentViewer.style.fontSize = '60px';
+    contentViewer.style.textAlign = "center";
+})();</code></pre>
+		</div>
+</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 2</span></p>
+		</div>
+	</div>
+</section>
+
+
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 425px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+
+<pre class="javascript"><code>&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt; connections &lt;/title&gt;
+        &lt;meta name="description" content="Help people find connected entities/values in their database."&gt;
+        &lt;meta name="author" content="Marcellin Nshimiyimana"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="js/index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CnL7">https://repl.it/CnL7</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 731px; left: 115px; top: 31px; height: auto;" data-block-id="1695b2abb28d17d89af3968099596509">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 255, 255); text-align: center;">
+			<h1>
+				<span style="font-size:128px">Hackers <strong>Learn</strong><br>
+					By <s>Reading</s><br>
+					<strong>Making</strong> Stuff</span>
+				</h1>
+			</div>
+		</div>
+</section>
+
+</section>
+<!-- END exercise 2 -->
+<!-- START exercise 3 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					Think of a userful <em><i>application</i></em> and then display its <em><strong>title</strong></em> and <em><strong>description</strong></em>
+					inside the <em><i>webpage</em></i> that you have created in <em><i> Exercise 2 </i></em>
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" data-block-id="0cc7bd579a47a01d1bca684a8a225f42" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 551px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+			<p>
+				<span style="font-size:32px">
+					Sample answer is provided below
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 3</span></p>
+		</div>
+	</div>
+</section>
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="code" style="width: 854px; height: 610px; left: 54px; top: 22px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+
+<pre class="javascript"><code>&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt; connections &lt;/title&gt;
+        &lt;meta name="description" content="Help people find connected entities/values in their database."&gt;
+        &lt;meta name="author" content="Marcellin Nshimiyimana"&gt;
+        &lt;link rel="stylesheet" href="index.css" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;section class="box"&gt;
+            &lt;div class="inner-box center"&gt;
+                &lt;h1 id="title" class="title"&gt;&lt;/h1&gt;
+                &lt;div id="description" class="description"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;script src="js/index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 652px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CnLx/3">https://repl.it/CnLx/3</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+<section class="has-dark-background" data-background-color="#073763">
+
+	<div class="sl-block" data-block-type="text" data-block-id="b94b9f13ba32d75c5b2e04d98f752bdd" style="height: auto; min-width: 30px; min-height: 30px; width: 688px; left: 146px; top: 80px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);">
+			<p style="text-align:left" title="What we are making : suchana kheti => information farming => data farming">
+				<span style="font-size:80px">Connections</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" data-block-id="43094655d20b471940be7507a7913e42"
+		style="height: auto; min-width: 30px; min-height: 30px; width: 722px; left: 119px; top: 300.5px; text-align: left;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 255, 255);">
+			<!-- <p>As of 2015, a new version (<em><strong>ES6</strong></em>) has been released but not all browser support it.</p> -->
+			<!-- <p>Check the slide below for what we are building!</p> -->
+
+			<em><i>Goal</i></em>: Help people find connected entities/values in their database. <br><br>
+			<em><i>Walk-flow</i></em>: User provides <em><strong>a value</em></strong> (name, email, title ...) and then the app provides <em><strong>more values</em></strong> that have similar properties.
+
+		</div>
+	</div>
+</section>
+
+</section>
+<!-- END exercise 3 -->
+
+<!-- END JavaScript Interpreter -->
+
+<!-- START About Variables -->
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 148px; height: auto;" data-block-id="734b0043ddbbb14ebb25759876a225b7">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(238, 238, 238);">
+			<h1>
+				Basic Concepts<br>
+				About Variables
+			</h1>
+		</div>
+	</div>
+
+</section>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 756px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p><span style="font-size:72px">A <span style="color:#B22222">variable</span> is a named<br>
+				container for a <strong><em>value</em></strong></span>
+			</p>
+		</div>
+	</div>
+<div class="sl-block" data-block-type="text" data-block-id="0cc7bd579a47a01d1bca684a8a225f42" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 401px;">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+		<p><span style="font-size:32px">The <strong><em>name</em></strong> that refers to a variable<br>
+			is sometime called <em>an <strong>identifier</strong></em></span>
+		</p>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+		<p><span style="color:#FFFFFF">Definition</span></p>
+	</div>
+</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="shape" data-block-id="ae91649b55be1a5564b6c478d0ce49fd" style="min-width: 4px; min-height: 4px; width: 238px; height: 99px; left: 75px; top: 445px;">
+    <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="4">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 238 99"><defs><clippath id="shape-mask-31-1426347908808"><rect width="238" height="99"></rect></clippath></defs><rect width="238" height="99" clip-path="url(#shape-mask-31-1426347908808)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="8"></rect></svg>
+    </div>
+</div>
+<div class="sl-block" data-block-type="code" data-block-id="6f7f8d8a105e1dedce2a5e7fa66f2217" style="min-width: 30px; min-height: 30px; width: 652px; height: 262px; left: 228px; top: 38px;">
+    <div class="sl-block-content" style="z-index: 12; font-size: 180%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var step;
+var period = 10000;
+var leftTime;</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="6e2c409ac01fd4af61ad991388dab736" style="height: auto; min-width: 30px; min-height: 30px; width: 116px; left: 75px; top: 410px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 255, 255); background-color: rgb(204, 0, 0);">
+        <p>step</p>
+    </div>
+</div>
+
+
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 220px; height: 99px; left: 665px; top: 445px;" data-block-id="0a931d997ec9b2b34f245a3ca00a4cc7">
+    <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="4">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 220 99">
+					<defs>
+						<clippath id="shape-mask-32-1426347908814"><rect width="220" height="99"></rect></clippath>
+					</defs>
+					<rect width="220" height="99" clip-path="url(#shape-mask-32-1426347908814)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="8"></rect>
+				</svg>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 138px; left: 665px; top: 410px;" data-block-id="07d98808b2fc5c6ac9fb0f04743b2df3">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(255, 255, 255); background-color: rgb(204, 0, 0);">
+        <p>leftTime</p>
+    </div>
+</div>
+
+<div class="sl-block" data-block-type="text" data-block-id="6c370fd57f9536272708ea7174fb1df5" style="height: auto; min-width: 30px; min-height: 30px; width: 890px; left: 11px; top: 331px;">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+		<p style="text-align:left">
+			<span style="color:#B22222">
+				<span style="font-size:24px">
+					These red boxes are <em><strong>variables</strong></em>,
+					and each of them has a <em><strong>name (identifier)</strong></em>
+				</span>
+			</span>
+		</p>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="text" data-block-id="316ba6b4afedfe7aaed64d38e08bf9fa" style="height: auto; min-width: 30px; min-height: 30px; width: 201px; left: 94px; top: 470px;">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);" dir="ui">
+		<pre style="text-align: center;">undefined</pre>
+	</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 209px; left: 380px; top: 470px;" data-block-id="aad63af55868b7bbd0b5d9bb777de12f">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+		<pre>10000</pre>
+	</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 187px; left: 682px; top: 470px;" data-block-id="499b3388409fa7b5c18812fa55fda892"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align:center">undefined</pre>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 258px; height: 99px; left: 355px; top: 445px;" data-block-id="352ffd0c46afb52aa04d165a526dc731">
+    <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 10;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="4">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 258 99"><defs><clippath id="shape-mask-33-1426347908822"><rect width="258" height="99"></rect></clippath></defs><rect width="258" height="99" clip-path="url(#shape-mask-33-1426347908822)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="8"></rect></svg>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 116px; left: 355px; top: 410px;" data-block-id="731304c7419a4228dd3ceafc4c2e2d5d">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(255, 255, 255); background-color: rgb(204, 0, 0);">
+<p>period</p>
+</div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 657px; left: 238px; top: 553px;" data-block-id="7084c5099b9580f114392704c7459d97">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23;">
+		<p style="text-align:left">
+			<span style="color:#008080"><span style="font-size:24px">Any <em><strong>JavaScript value</strong></em> can be contained within these boxes</span></span>
+		</p>
+	</div>
+</div>
+
+</section>
+<section>
+	<div class="sl-block" data-block-type="shape" style="width: 238px; height: 99px; left: 75px; top: 445px;" data-block-id="46c5c6af9832f4b71183178369a94d85">
+    <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 11;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="4">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 238 99">
+					<defs>
+						<clippath id="shape-mask-28-1426347908719"><rect width="238" height="99"></rect></clippath>
+					</defs>
+					<rect width="238" height="99" clip-path="url(#shape-mask-28-1426347908719)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="8"></rect>
+				</svg>
+    </div>
+</div>
+<div class="sl-block" data-block-type="code" style="width: 652px; height: 262px; left: 228px; top: 38px;" data-block-id="54daa399c1d1650ff51a214e360d51f5">
+    <div class="sl-block-content" style="z-index: 12; font-size: 180%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var step = 1000;
+var period = 10000;
+var leftTime;
+leftTime = period;
+leftTime = leftTime - step;</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 116px; left: 75px; top: 410px;" data-block-id="8a14b32f5f91260a0b27829063c3ef57">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 255, 255); background-color: rgb(204, 0, 0);">
+        <p>step</p>
+    </div>
+</div>
+
+
+<div class="sl-block" data-block-type="shape" style="width: 220px; height: 99px; left: 665px; top: 445px;" data-block-id="0e5f3e187f0de0b525a3c379a6681a89">
+    <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="4">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 220 99">
+					<defs>
+						<clippath id="shape-mask-29-1426347908725"><rect width="220" height="99"></rect></clippath>
+					</defs>
+					<rect width="220" height="99" clip-path="url(#shape-mask-29-1426347908725)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="8"></rect>
+				</svg>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 138px; left: 665px; top: 410px;" data-block-id="7b2ca684a22e6040ddb35c5eb6edad56">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(255, 255, 255); background-color: rgb(204, 0, 0);">
+        <p>leftTime</p>
+    </div>
+</div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 201px; left: 94px; top: 470px;" data-block-id="78cc4d518b3ff441cb09d29e7c369bae">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);" dir="ui">
+		<pre style="text-align: center;">1000</pre>
+	</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 209px; left: 380px; top: 470px;" data-block-id="05e4af1aab360a3b91e933a7d38cd302">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+		<pre>10000</pre>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 103px; left: 724px; top: 470px;" data-block-id="be1cf017004eefd8ff214e1d2db8f486">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+		<pre style="text-align: center;">9000</pre>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="shape" style="width: 258px; height: 99px; left: 355px; top: 445px;" data-block-id="d923b8b2e8941972606b3d24949e4a22">
+	<div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 10;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="4">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 258 99">
+			<defs>
+				<clippath id="shape-mask-30-1426347908732"><rect width="258" height="99"></rect></clippath>
+			</defs>
+			<rect width="258" height="99" clip-path="url(#shape-mask-30-1426347908732)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="8"></rect>
+		</svg>
+	</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 116px; left: 355px; top: 410px;" data-block-id="f76303a4e11fa0cbe8a93ae025720eff">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(255, 255, 255); background-color: rgb(204, 0, 0);">
+		<p>period</p>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 697px; left: 238px; top: 553px;" data-block-id="5a36d947c9556f88593d7dd473fcff26">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21;" dir="ui">
+		<p style="text-align:left"> </p>
+
+		<p style="text-align:left"><span style="color:#008080"><span style="font-size:24px">We can <em><strong>assign</strong></em> another <em><strong>value</strong></em> to a variable later after its creation</span></span></p>
+	</div>
+</div>
+
+
+
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 53px; height: 53px; left: 868px; top: 467px;" data-block-id="ddde67bce25e426c485551748ba1a945">
+	<div class="sl-block-content" data-shape-type="arrow-left" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 22;">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 53 53">
+			<polygon points="53,15.899999999999999 26.5,15.899999999999999 26.5,0 0,26.5 26.5,53 26.5,37.099999999999994 53,37.099999999999994 53,15.899999999999999" class="shape-element" fill="rgb(166, 77, 121)"></polygon>
+		</svg>
+	</div>
+</div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 53px; height: 53px; left: 855px; top: 195px;" data-block-id="86b46c25a1d23229715d75389f7687cb">
+	<div class="sl-block-content" data-shape-type="arrow-left" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 24;">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 53 53">
+			<polygon points="53,15.899999999999999 26.5,15.899999999999999 26.5,0 0,26.5 26.5,53 26.5,37.099999999999994 53,37.099999999999994 53,15.899999999999999" class="shape-element" fill="rgb(166, 77, 121)"></polygon>
+		</svg>
+	</div>
+</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 856px; left: 84px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p><span style="font-size:72px">A <span style="color:#B22222">variable</span> can be accessed
+				any where inside the owning <strong><em>function</em></strong>.</span>
+			</p>
+		</div>
+	</div>
+<div class="sl-block" data-block-type="text" data-block-id="0cc7bd579a47a01d1bca684a8a225f42" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 501px;">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+		<p>
+			<!-- <span style="font-size:32px">A variable's scope is the context in which the variable exists</span><br> -->
+			<span style="font-size:32px">Variables have either a <em><strong>local</strong></em> scope (<em><i>when declared inside a function</i></em>) or a <em><strong>global</strong></em> scope (<em><i>when declared outside a function</i></em>).</span>
+		</p>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+		<p><span style="color:#FFFFFF">Functional Scope</span></p>
+	</div>
+</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 930px; left: 15px; top: 25px;" data-block-id="e18a8ed209983eefe7ba93daec93e522">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+			<p>
+				<span style="font-size:48px">Consider this examples</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="code" style="width: 750px; height: 381px; left: 115px; top: 177px;" data-block-id="d27f9845997c5118e9346492061b617b">
+    <div class="sl-block-content" style="z-index: 12; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+			<pre class="javascript"><code>function updateTime(period, leftTime, step) {
+  'use strict';
+  newTime = leftTime - step;
+  if(newTime <= 0 ) {
+    newTime = period;
+  }
+  return newTime;
+  var newTime;
+}
+// note where "newTime" variable is declared</code></pre>
+    </div>
+	</div>
+</section>
+
+
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 756px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:72px">A <span style="color:#B22222">variable</span> is always <strong><em>declared</em></strong>
+				at the <strong><em>begining</em></strong> of its scope.</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" data-block-id="0cc7bd579a47a01d1bca684a8a225f42" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 501px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+			<p>
+				<span style="font-size:32px">
+					The Interpreter moves all variable declarations at the top of the function, if defined in a function, or the top of the global context, if outside a function.
+				</span>
+			</p>
+		</div>
+	</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+		<p><span style="color:#FFFFFF">Hoisted</span></p>
+	</div>
+</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 930px; left: 15px; top: 25px;" data-block-id="e18a8ed209983eefe7ba93daec93e522">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+			<p>
+				<span style="font-size:48px">You write this:</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="code" style="width: 910px; height: 411px; left: 35px; top: 157px;" data-block-id="d27f9845997c5118e9346492061b617b">
+    <div class="sl-block-content" style="z-index: 12; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+			<pre class="javascript"><code>var period = 10000;
+
+var leftTime = period,
+    step = 1000;
+
+window.setInterval(function(){
+    window.console.log(leftTime);
+    leftTime = updateTime(period, leftTime, step);
+    if(leftTime === period) {
+        window.console.log(getRandom(1, 100));
+    }
+}, step);</code></pre>
+    </div>
+	</div>
+</section>
+<section>
+	<div class="sl-block" data-block-type="code" style="width: 910px; height: 411px; left: 35px; top: 157px;" data-block-id="8a258a2459f2ae18dce1412f598f6f80">
+    <div class="sl-block-content" style="z-index: 11; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var leftTime, period, step; // all undefined
+
+period = 10000;
+leftTime = period;
+step = 1000;
+window.setInterval(function(){
+    window.console.log(leftTime);
+    leftTime = updateTime(period, leftTime, step);
+    if(leftTime === period) {
+        window.console.log(getRandom(1, 100));
+    }
+}, step);</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 930px; left: 15px; top: 25px;" data-block-id="7cb75269ac1a740ec05864ee700ca5b9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p><span style="font-size:48px">The interpreter runs this:</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 468px; left: 675px; top: 485px;" data-block-id="1f79baaa4c98bd30c475d9f349f6908a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 255, 255); font-size: 70%; border: 3px solid rgb(166, 77, 121); border-radius: 15px; padding: 5px; text-align: left; background-color: rgb(166, 77, 121);">
+<p>When the program runs, all variable declarations<br>
+are moved up <span style="color:#FFFF00"><em><strong>to the top of the current scope</strong></em></span>.</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="2b336324e82df02c69d950c94fe161fa" style="min-width: 4px; min-height: 4px; width: 107px; height: 75px; left: 892px; top: 156px;">
+	<div class="sl-block-content" data-shape-type="arrow-left" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 14;">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 145 83"><polygon points="145,24.9 72.5,24.9 72.5,0 0,41.5 72.5,83 72.5,58.099999999999994 145,58.099999999999994 145,24.9" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg>
+	</div></div>
+</section>
+
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 923px; left: 19px; top: 17px;" data-block-id="def5a00bed9ffe379573f53c587f23f7">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+			<p><span style="font-size:48px"><strong>Reserved Words</strong></span></p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" data-block-id="f4176861d33916bcc2b38e11fbc4fb58" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 140px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+			<p>Some keywords can not be used as variable names:</p>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="code" style="width: 744px; height: 321px; left: 108px; top: 201px;" data-block-id="508be5e53982dce536e18f99c176240f">
+    <div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>null true false break do instanceof typeof
+case else new var catch finally return void
+continue for switch while debugger function
+this with default if throw delete in try
+class enum extends super const export import
+
+implements let private public yield
+interface package protected static</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="ea94133ebee2522b17f2ee6f0c8d6b4d" style="height: auto; min-width: 30px; min-height: 30px; width: 930px; left: 15px; top: 551px;">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(102, 102, 102); font-size: 90%;">
+		<p>
+			We don't need to remember them all.   Just be aware of the<br>
+			possible cause for some SyntaxError exceptions in our program.
+		</p>
+	</div>
+</div>
+</section>
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="cd88612ad466d13dbcc2b60be13953eb">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255);">
+			<h1>Global variables and others</h1>
+			<p> window, document, screen </p>
+			<p> Infinity, NaN, undefined, arguments </p>
+		</div>
+	</div>
+</section>
+
+</section>
+
+<!-- START exercise 2 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					TODO
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="code" style="width: 844px; height: 381px; left: 108px; top: 281px;" data-block-id="508be5e53982dce536e18f99c176240f">
+		<div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+				<pre class="javascript"><code></code></pre>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 1</span></p>
+		</div>
+	</div>
+</section>
+
+
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 425px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+
+<pre class="javascript"><code>&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt; connections &lt;/title&gt;
+        &lt;meta name="description" content="Help people find connected entities/values in their database."&gt;
+        &lt;meta name="author" content="Marcellin Nshimiyimana"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="js/index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CnL7">https://repl.it/CnL7</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+<!-- END exercise 2 -->
+<!-- START exercise 3 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					TODO
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="code" style="width: 844px; height: 381px; left: 108px; top: 281px;" data-block-id="508be5e53982dce536e18f99c176240f">
+		<div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+				<pre class="javascript"><code></code></pre>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" data-block-id="0cc7bd579a47a01d1bca684a8a225f42" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 551px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+			<p>
+				<span style="font-size:32px">
+					Sample answer is provided below
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 2</span></p>
+		</div>
+	</div>
+</section>
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="code" style="width: 854px; height: 610px; left: 54px; top: 22px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+
+<pre class="javascript"><code>&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt; connections &lt;/title&gt;
+        &lt;meta name="description" content="Help people find connected entities/values in their database."&gt;
+        &lt;meta name="author" content="Marcellin Nshimiyimana"&gt;
+        &lt;link rel="stylesheet" href="index.css" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;section class="box"&gt;
+            &lt;div class="inner-box center"&gt;
+                &lt;h1 id="title" class="title"&gt;&lt;/h1&gt;
+                &lt;div id="description" class="description"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;script src="js/index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 652px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CnLx/3">https://repl.it/CnLx/3</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+<!-- END exercise 3 -->
+
+<!-- END variables -->
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 148px; height: auto;" data-block-id="b1c1b5a5664c9460db7475dcc76fb438">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(238, 238, 238);">
+			<h1>Basic Concepts<br>
+				About Values &amp; Types
+			</h1>
+		</div>
+	</div>
+</section>
+
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; width: 829px; left: 80px; top: 70px;" data-block-id="62fc15a62b990794441f9720f369c891">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:64px">
+					A <span style="color:#B22222">value</span> represents the most<br>
+					basic data we can deal with
+				</span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="861e3c42ba45b2a073c3bf1f95104951">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Definition</span></p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; width: 863px; left: 80px; top: 350px;" data-block-id="f2d9cd9f730a0a03255ee83fc9eefc47">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+			<p>
+				<span style="font-size:64px">
+					A <span style="color:#B22222">type</span> is a <strong><em>set</em></strong> of data values,<br>
+					and there are exactly <span style="color:#B22222">6</span> types
+				</span>
+			</p>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 192px; left: 230px; top: 161px;" data-block-id="aab683a5c468f282033d6ccb7e70367e">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+			<pre style="text-align: center;">undefined</pre>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 191px; left: 30px; top: 140px;" data-block-id="1bf07e79cb19f466322867bc9155a387">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255); padding: 25px; border-style: solid; border-width: 1px; border-radius: 25px; background-color: rgb(168, 39, 107);">
+			<p><em>Undefined</em></p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 101px; left: 616px; top: 161px;" data-block-id="7eab67ae17c6aa1a4673b4b48382c9a3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+		<pre style="text-align: center;">null</pre>
+	</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 120px; left: 488px; top: 140px;" data-block-id="73e868d4900cea2a29891a35eb450306"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 255, 255); padding: 25px; border-style: solid; border-width: 1px; border-radius: 25px; background-color: rgb(168, 39, 107);">
+<p><em>Null</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 168px; left: 30px; top: 256px;" data-block-id="5cad4dcbd8ae4d59d575a73a265fae49"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 255); padding: 25px; border-style: solid; border-width: 1px; border-radius: 25px; background-color: rgb(168, 39, 107);">
+<p><em>Boolean</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 85px; left: 211px; top: 277px;" data-block-id="b8864abd2d5a2bb64f95b27494122eb1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">true</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 118px; left: 304px; top: 277px;" data-block-id="e7f6f68995cfea447ead4347c150a6a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">false</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 168px; left: 458px; top: 256px;" data-block-id="257a59fea9095f97af08a5c1d2fbe212"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(255, 255, 255); padding: 25px; border-style: solid; border-width: 1px; border-radius: 25px; background-color: rgb(168, 39, 107);">
+<p><em>Number</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 82px; left: 640px; top: 246px;" data-block-id="a9794bbe8d322abdad8aa4fc463fc658"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">.33</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 113px; left: 735px; top: 246px;" data-block-id="c3137d27f05cec9f3bea7ec4db75a08c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">-3.14</pre>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 92.5px; left: 769px; top: 359px;" data-block-id="bb74709a8f4a3a0b55bfd5528b023129"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">NaN</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 95px; left: 640px; top: 302px;" data-block-id="418f667c1d95568c090948e9e81c27df"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">7e-2</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 95px; left: 863px; top: 246px;" data-block-id="20c2c0ef5ab41442e73edc7db1485ebd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">011</pre>
+</div></div>
+
+
+	<!-- <div class="sl-block" data-block-type="text" data-block-id="c5da9445fa7a738e730e98cece23865b" style="height: auto; min-width: 30px; min-height: 30px; width: 193px; left: 433px; top: 343px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23;">
+			<p><span style="color:#800080"><span style="font-size:16px">(IEEE754 64-bit doubles)</span></span></p>
+		</div>
+	</div> -->
+
+<div class="sl-block" data-block-type="text" data-block-id="3d2c29aa93a24f41c58a4ca5560bcb4f" style="height: auto; min-width: 30px; min-height: 30px; width: 930px; left: 15px; top: 25px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24;" dir="ui">
+<p><strong><span style="font-size:48px">There are <span style="color:#B22222">5</span> primitive (non-Object) types</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 168px; left: 30px; top: 426px;" data-block-id="fcc854825e5456fc77739123e6144e9a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(255, 255, 255); padding: 25px; border-style: solid; border-width: 1px; border-radius: 25px; background-color: rgb(168, 39, 107);">
+<p><em>String</em></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 59px; left: 211px; top: 438px;" data-block-id="1f80eafecacaec84b1988710e7e9d8ba"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">""</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 111px; left: 730px; top: 438px;" data-block-id="80912120542fb7f311ee20f489642689"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 27; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">"\n"</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 281px; left: 279px; top: 438px;" data-block-id="3f262226ce31425b9c53b27923eac389"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 28; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">"Connections"</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 152px; left: 568px; top: 438px;" data-block-id="02a3f4a3c9ece3becbe2eb3124010364"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 29; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align:center">"哈囉。"</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 94px; left: 851px; top: 437px;" data-block-id="9bd4ef2a305f08f8f552a2f50b180642"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 30; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align: center;">"\""</pre>
+</div></div>
+
+	<!-- <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 416px; left: 536px; top: 490px;" data-block-id="40e4c9bcc1efe7186ece569fc17883e1">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 31;">
+			<p><span style="color:#800080"><span style="font-size:16px">(Any finite ordered sequence of 16-bit unsigned integers)</span></span></p>
+		</div>
+	</div> -->
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 331px; left: 211px; top: 495px;" data-block-id="9abc087537df4e7c71342aaedb55ecf2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 32; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align:center">'w Single Quotes'</pre>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 944px; left: 8px; top: 597px;" data-block-id="058c71d10506785cbb272f511c8625c6">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 33;" dir="ui">
+		<p>
+			<span style="font-size:32px">Any value here is called <span style="color:#008080"><em><strong>a primitive value</strong></em></span></span>
+		</p>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 115px; left: 640px; top: 359px;" data-block-id="be3f8f1271c4477b8df3e2637f4814d2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 34; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align:center">0x101</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 188px; left: 747px; top: 302px;" data-block-id="84c34fae2aa6e024a5cedc8b34303060"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 35; color: rgb(255, 255, 255); padding: 5px; background-color: rgb(69, 129, 142);">
+<pre style="text-align:center">-Infinity</pre>
+</div></div></section>
+
+
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 930px; left: 15px; top: 25px;" data-block-id="afdbc36f722459da484feea7f59ce308">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" dir="ui">
+			<p><span style="font-size:48px"><strong>And then there is the </strong></span><span style="font-size:48px"><strong>"Object" type</strong></span></p>
+		</div>
+	</div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 280px; left: -39px; top: 171px;" data-block-id="97ab03477dfb2e14dccad3e8d3cf9ead">
+    <div class="sl-block-content" style="z-index: 20; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>// object creation
+var title =
+    new String("connections");
+var entity = {
+    content: "https://ibm.com",
+    properties: []
+};</code></pre>
+    </div>
+</div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 582px; height: 280px; left: 513px; top: 171px;" data-block-id="040c95f222fdcf991994a830c452d6dd">
+    <div class="sl-block-content" style="z-index: 27; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>// To get the values
+title;  // (object ref) => [String: "connections"]
+entity;  // (object ref)
+entity['content']; // "https://ibm.com"
+entity.properties; // []
+</code></pre>
+    </div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 168px; left: -55px; top: 98px;" data-block-id="80ddf6efa070b1b11c4e78a05be32dc1">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 28; color: rgb(255, 255, 255); padding: 25px; border-style: solid; border-width: 1px; border-radius: 25px; background-color: rgb(168, 39, 107);">
+		<p><em>Object</em></p>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 944px; left: 8px; top: 560px;" data-block-id="85aa9f89fe8dd0446c14fabc50cb2cb7">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" dir="ui">
+		<p>
+			<span style="font-size:32px">
+				In computer science, an object is a value in memory which is possibly
+				<em><strong><span style="color:#008080">referenced</span> by an <span style="color:#000080">"identifier"</span></strong></em>
+			</span>
+		</p>
+	</div>
+</div>
+
+</section>
+
+
+
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="ed0ef9c30f91d0f51cd9caebe96eea73">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Definition</span></p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 877px; left: 42px; top: 94px;" data-block-id="3a572b49146b5a1def800a0c916fe412">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+			<p><span style="font-size:64px">An <span style="color:#B22222">object</span> is a<br>
+				collection of <em><strong>properties</strong></em></span>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 877px; left: 42px; top: 333px;" data-block-id="da4aaed52f94a94c02ecb9e3b3436c57">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+			<p>
+				<span style="font-size:64px">
+					A <span style="color:#B22222">property</span> is a<br>
+					named container for a <em><strong>value</strong></em><br>
+					<span style="color:#D3D3D3">w/ some additional attributes</span>
+				</span>
+			</p>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="bd0f29817d51eab576407a5959095e55" style="height: auto; min-width: 30px; min-height: 30px; width: 871px; left: 75px; top: 111px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 160%; text-align: left;">
+			<p>
+				The <em><strong>name of a property</strong></em> is called <em><strong>a <span style="color:#B22222">key</span></strong></em>;<br>
+				thus, <em><strong>an object</strong></em> can be considered as<br>
+				<em><strong>a <span style="color:#B22222">collection of key-value pairs</span></strong></em>.
+			</p>
+		</div>
+	</div>
+
+<div class="sl-block" data-block-type="text" data-block-id="9fdf66d5969f40d461ccdd4fec880c88" style="height: auto; min-width: 30px; min-height: 30px; width: 879px; left: 75px; top: 351px;">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(68, 68, 68); text-align: left;">
+		<p>
+			There are similar concepts in other programming languages,<br>
+			e.g., <em>Map, Dictionary, Associative Array, Symbol Table, Hash Table</em>, ...
+		</p>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="6be16fc4aa025157a68a60dfd7a2be14"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; padding: 10px; background-color: rgb(7, 55, 99);">
+<p><span style="color:#FFFFFF">Definition</span></p>
+</div></div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="64fc4f8afac911e91afcb6896619ac8b" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: -10px; top: 114px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+			<p>
+				<em><i>Variable</i></em>: An association between a <em><i>name</i></em> and a <em><i>value</i></em> that exists within an execution context.
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" data-block-id="64fc4f8afac911e91afcb6896619ac8b" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: -10px; top: 214px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+			<p>
+				<em><i>Property</i></em>: An association between a name and a value that is a part of an object. [ECMA 5: 4.3.26]
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 600px; height: 380px; left: -150px; top: 301px;" data-block-id="97ab03477dfb2e14dccad3e8d3cf9ead">
+  	<div class="sl-block-content" style="z-index: 20; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+  		<pre class="javascript"><code>//Examples of variables
+var leftTime = 10; //global context
+function updateTime(period, step) {
+  var newTime; //function context
+  var newTime = leftTime - step;
+  if(newTime <= 0 ) {
+    leftTime = period; //global context
+  }
+  return leftTime;
+} //don't use this code</code></pre>
+		</div>
+	</div>
+
+
+<div class="sl-block" data-block-type="text" data-block-id="2a3436331214eca266c5dfac24c0933c" style="height: auto; min-width: 30px; min-height: 30px; width: 923px; left: 19px; top: 17px;">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25;">
+		<p><span style="font-size:48px"><strong>A “<em>variable</em>” vs a “<em>property</em>” in an object</strong></span></p>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 650px; height: 380px; left: 473px; top: 301px;" data-block-id="040c95f222fdcf991994a830c452d6dd">
+    <div class="sl-block-content" style="z-index: 27; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>//Examples of properties
+var entity = { ... };
+window.setInterval(function() {
+  // property
+  viewer.title = entity.text;
+  leftTime = updateTime...
+  if(leftTime === period) {
+    // property
+    entity.connections = ...
+  }
+}, step);</code></pre>
+    </div>
+</div>
+
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; width: 738px; left: 128px; top: 88px;" data-block-id="1ababe605f242cd8b81a7216a9bd1aac"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+		<p>Allow the execution of extra logic during variable access or modification.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 833px; height: 437px; left: 64px; top: 181px;" data-block-id="73d6494a86074e5e81dc11848015e1d9">
+    <div class="sl-block-content" style="z-index: 13; font-size: 135%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>// use setter to make sure _connections is always positive
+var entity = {
+  text: "John Smith",
+  _connections: 10,
+  get connections() { // getter
+    return this._connections;
+  },
+  set connections(value) { //setter
+    // connections holds a positive number
+    this._connections = value > 0? value : 0;
+  }
+}
+entity.connections = 20; // => 20
+entity.connections = -10; // => 0</code></pre>
+    </div>
+</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 305px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+		<p><span style="color:#FFFFFF">Getter and Setter</span></p>
+	</div>
+</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Immutable Data</span></p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 856px; left: 84px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px"><em>Properties</em> of an <span style="color:#B22222">object</span> can be forced to keep their values.</span>
+			</p>
+		</div>
+	</div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 705px; height: 290px; left: 128px; top: 330px;" data-block-id="9182073238a20eb3f7575998e0fef382">
+	<div class="sl-block-content" style="z-index: 12; font-size: 128%; border: 20px solid rgb(63, 63, 63);">
+		<pre class="javascript"><code>// use of Object.defineProperty
+var entity = { text: "john smith" }; // => john smith
+entity.text = "Ben"; // => Ben
+Object.defineProperty(
+  entity,
+  "text",
+  { writable: false }
+);
+entity.text = "john smith"; // => Ben
+		</code></pre>
+	</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 944px; left: 8px; top: 637px;" data-block-id="058c71d10506785cbb272f511c8625c6">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 33;" dir="ui">
+		<p>
+			<span style="font-size:32px">To immute all properties at once, use <span style="color:#008080"><em><strong>Object.freeze</strong></em></span></span>
+		</p>
+	</div>
+</div>
+</section>
+
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 738px; left: 128px; top: 108px;" data-block-id="848fccf6e091c35a5903af3761fd276d">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+			<p>
+				JavaScript interpreter will think that we are writing<br>
+				a “<em><strong>code block</strong></em>” when we start with the “<em><strong>curly braces</strong></em>”<br>
+				as a JavaScript “<em><strong>statement</strong></em>”.
+			</p>
+
+			<p>
+				We can to force it to think about “<em><strong>an expression</strong></em>”<br>
+				using the <em><strong>grouping operator</strong></em>.
+			</p>
+		</div>
+	</div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 345px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+		<p><span style="color:#FFFFFF">Property access issues</span></p>
+	</div>
+</div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 705px; height: 360px; left: 128px; top: 330px;" data-block-id="9182073238a20eb3f7575998e0fef382">
+	<div class="sl-block-content" style="z-index: 12; font-size: 128%; border: 20px solid rgb(63, 63, 63);">
+		<pre class="javascript"><code>var w = { x: "test" };
+var y = { x: "test" }.x;
+
+w.x;                  // "test"
+y;                    // "test"
+
+{ x: "test" }.x;      // SyntaxError: unexpected .
+
+({ x: "test" }.x);    // "test"
+({ x: "test" }).x;    // "test"
+({ x: "test" })['x']; // "test"
+({ x: "test" }['x']); // "test"</code></pre>
+	</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 409px; left: 513px; top: 313px;" data-block-id="5ca44093cfa7a7a43db9581561efd550">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 255); font-size: 70%; border-style: solid; border-radius: 15px; padding: 8px; text-align: left; background-color: rgb(166, 77, 121);">
+		<p>
+			NOTE:  Getting a property after an object<br>
+			literal is not considered a good pattern
+		</p>
+	</div>
+</div>
+</section>
+
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 738px; left: 128px; top: 108px;" data-block-id="848fccf6e091c35a5903af3761fd276d">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+			<p>
+				TODO
+			</p>
+
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 395px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Pass by Value vs Reference</span></p>
+		</div>
+	</div>
+
+
+</section>
+
+
+<!-- START exercise 1 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					TODO
+				</span>
+			</p>
+		</div>
+	</div>
+
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 1</span></p>
+		</div>
+	</div>
+</section>
+
+
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 425px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+
+<pre class="javascript"><code>&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt; connections &lt;/title&gt;
+        &lt;meta name="description" content="Help people find connected entities/values in their database."&gt;
+        &lt;meta name="author" content="Marcellin Nshimiyimana"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="js/index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CnL7">https://repl.it/CnL7</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+<!-- END exercise 1 -->
+
+
+
+<!-- START functions -->
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 148px; height: auto;" data-block-id="b1c1b5a5664c9460db7475dcc76fb438">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(238, 238, 238);">
+			<h1>
+				<br>
+				Functions
+			</h1>
+		</div>
+	</div>
+</section>
+
+
+<section><div class="sl-block" data-block-type="text" style="height: auto; width: 245px; left: 0px; top: 0px;" data-block-id="6f3b7e9f361f71b972ebc4588d9e8e6c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; padding: 10px; background-color: rgb(7, 55, 99);">
+<p><span style="color:#FFFFFF">Definition</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 737px; left: 112px; top: 108px;" data-block-id="c5cbbb2cffd2307e89243202dfdbda18"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p><span style="font-size:72px">A <span style="color:#B22222">function</span> is an <em><strong>object</strong></em><br>
+that is <em><strong>callable</strong></em></span></p>
+</div></div></section><section><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 548px; height: 242px; left: 206px; top: 303px;" data-block-id="aa20e68c39d71cf1f109c5398fbb72a6">
+    <div class="sl-block-content" style="z-index: 11; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var a = 7;
+var sayhi = function (name) {
+    var a = "Hello " + name;
+    console.log(a);
+    return a;
+};</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 923px; left: 19px; top: 17px;" data-block-id="3425ebd6ac24416606e78c4632a86694"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>Function Expression</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 722px; left: 119px; top: 116.5px;" data-block-id="4038b01ac7f1e7de90bc6eb98fc8f7f8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>The notation using the keyword “<span style="color:#B22222"><em><strong>function</strong></em></span>”<br>
+followed by an <em><strong><span style="color:#B22222">argument list</span></strong></em> and a <span style="color:#B22222"><em><strong>code block</strong></em></span><br>
+to <em><strong>create</strong></em>/<em><strong>initialize</strong></em> a JavaScript <em><strong>Function</strong></em> object</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="afb978023dc7a3b1928b0dc44b34bdd3" style="height: auto; min-width: 30px; min-height: 30px; width: 896px; left: 33px; top: 570px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 73%;">
+<p>Any function in JavaScript is <em><strong>first-class</strong></em>, which can be assigned<br>
+to a variable or passed as an ordinary value to another function.</p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="9cfbe6264e7c45a1f4fcb0f854d2ffcd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:48px"><strong>Function Invocation</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 930px; left: 15px; top: 117px;" data-block-id="342f6ac31c6445b68b04150dac3723d6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>A pair of parentheses invokes the preceding function;<br>
+the values of zero or more arguments are passed in.</p>
+
+<p><span style="color:#0000FF"><em><strong>Each time</strong></em></span> a function is called/invoked, it has <span style="color:#0000FF"><em><strong>its own variable scope</strong></em></span><br>
+with <span style="color:#B22222"><em><strong>local variables</strong></em></span> and <span style="color:#B22222"><em><strong>arguments</strong></em></span> filled with corresponding values</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 548px; height: 327px; left: 206px; top: 303px;" data-block-id="1ce1c7a8b11e464c956f99113b8f381f">
+    <div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var a = 7;
+var sayhi = function (name) {
+    var a = "Hello " + name;
+    console.log(a);
+    return a;
+};
+
+sayhi("J"); // "Hello J"
+a; // 7</code></pre>
+    </div>
+</div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="f6fc663a2576ef91861e9fd9fe550b09"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:48px"><strong>When # of Arguments Not Matched</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 930px; left: 15px; top: 117px;" data-block-id="5bb7b7a9368f2a3227afe03788bbaebe"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>In JavaScript, it is OK to invoke a function<br>
+with a <em><strong><span style="color:#B22222">mismatched</span> number of arguments</strong></em>.</p>
+
+<p>At run time, any <em><strong>argument without passing a value</strong></em> is filled with the<br>
+“<span style="color:#008080"><em><strong>undefined</strong></em></span>” value, just like a local variable without any assignment.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 724px; height: 327px; left: 118px; top: 303px;" data-block-id="86a338932adaf87373041db1eb20af91">
+    <div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var f = function (a, b) {
+    console.log(typeof b);
+    return a + b;
+};
+
+f(3);       // NaN ("undefined" printed)
+f(3, 4);    // 7   ("number" printed)
+f(3, 4, 5); // 7   ("number" printed)</code></pre>
+    </div>
+</div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="b14291564d37f36525df0f57d487e030"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:48px"><strong>Function Not Returning A Value</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 930px; left: 15px; top: 117px;" data-block-id="b80814498a303d340d36ff00ea7f563d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p>A function does <span style="color:#B22222"><em><strong>not</strong></em></span> necessarily<br>
+need to <em><strong>return a value explicitly</strong></em>.</p>
+
+<p>When that is the case, the “<span style="color:#008080"><em><strong>undefined</strong></em></span>” value is <em><strong>returned</strong></em>.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 724px; height: 360px; left: 118px; top: 303px;" data-block-id="3739721131f6dce7e363ebf1a69ea233">
+    <div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var f = function () {
+    return;
+};
+
+var g = function () {
+};
+
+var foo = f();
+foo; // undefined
+g(); // undefined</code></pre>
+    </div>
+</div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="5f67dab398adc21095d60c24f9158984"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:48px"><strong>Function Expression Can Be <span style="color:#000080"><em>Named</em></span></strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 761px; height: 594px; left: 119px; top: 99px;" data-block-id="d923026660c6de2b0332420b4c48f07d">
+    <div class="sl-block-content" style="z-index: 12; font-size: 120%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var fact = function (n) {
+    if (n === 0) return 1;
+    if (n &gt; 0) return n * fact(n - 1);              // *1
+};
+fact(3);     // 6, which is the factorial of 3
+
+var fact2 = fact;
+fact = null; // But if the value changes...
+fact2(3);    // TypeError: “null” is not function
+
+
+
+var f = function fib(n) {
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+    if (n &gt; 1) return fib(n - 1) + fib(n - 2);      // *2
+};
+f(10);       // 55
+
+var g = f;
+f = null;    // If the value changes...
+g(10);       // 55  (still working)</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="shape" data-block-id="fec7cd34326249fa9f205af198910977" style="min-width: 4px; min-height: 4px; width: 54px; height: 42px; left: 65px; top: 399px;"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 54 42"><polygon points="0,12.6 27,12.6 27,0 54,21 27,42 27,29.4 0,29.4" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1b0efd1708cfe6e1102a841dc6e68f7e" style="height: auto; min-width: 30px; min-height: 30px; width: 283px; left: 488px; top: 397px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 255); font-size: 60%; border-style: solid; border-radius: 15px; padding: 5px; background-color: rgb(166, 77, 121);">
+<p>The name “<span style="color:#FFFF00">fib</span>” is accessible<br>
+only inside the function itself</p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="c0884468c55df275a70b97c7f5c090c5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<p><span style="font-size:48px"><strong>Function Declaration Statement (1/2)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 722px; height: 490px; left: 119px; top: 140px;" data-block-id="0cc17dfebe63a64631a2f89cab199c37">
+    <div class="sl-block-content" style="z-index: 11; font-size: 130%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>// We can invoke a function
+// before its "declaration"
+//
+// Please see the next slide for the reason......
+
+
+var x = 100;
+
+plusOne(x); // 101
+plusOne(y); // NaN
+
+var y = 999;
+
+function plusOne(n) {
+    return n + 1;
+}</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 54px; height: 42px; left: 65px; top: 482px;" data-block-id="a092f7531622a3d9138c6937eccf5e5f"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 54 42"><polygon points="0,12.6 27,12.6 27,0 54,21 27,42 27,29.4 0,29.4" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 311.5px; left: 480.5px; top: 490px;" data-block-id="ed2b71ca14847c4e94d3ec002950e3f4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 255, 255); font-size: 60%; border-style: solid; border-radius: 15px; padding: 5px; background-color: rgb(166, 77, 121);">
+<p>This is a “<span style="color:#FFFF00"><strong>function declaration</strong></span>”<br>
+statement that <em><strong>requires</strong></em> a “<strong>name</strong>”</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 890px; left: 35px; top: 96px;" data-block-id="dd2fcd136a61fc652a7a817de0850857"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 76%;">
+<p>Functions can be used <em><strong>before</strong></em> their <em><strong>function declaration</strong></em> statements, because...</p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="fde855baa19114a959b3b37095387c34"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:48px"><strong>Function Declaration Statement (2/2)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 722px; height: 490px; left: 119px; top: 140px;" data-block-id="c6f50710f69f95ed90f44218dfdd9f71">
+    <div class="sl-block-content" style="z-index: 12; font-size: 130%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var x, y, plusOne;       // Variable declarations
+
+plusOne = function (n) { // Function declarations
+    return n + 1;        // are also moved to the
+};                       // top of current scope
+
+x = 100;
+
+plusOne(x); // 101
+plusOne(y); // NaN
+
+y = 999;</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 54px; height: 42px; left: 65px; top: 210px;" data-block-id="d8a801e98a2aefc1d0019b1b6fc6d9bf"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 54 42"><polygon points="0,12.6 27,12.6 27,0 54,21 27,42 27,29.4 0,29.4" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 459px; left: 374px; top: 490px;" data-block-id="c302d2e3c68a9b072bf393b79a7ae505"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 255); font-size: 70%; border-style: solid; border-radius: 15px; padding: 5px; background-color: rgb(166, 77, 121);">
+<p>When program runs, all function declarations<br>
+are moved up <span style="color:#FFFF00"><em><strong>to the top of the current scope</strong></em></span>,<br>
+as well as all variable declaration statements.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="513a0e32bfdf4fdbd0654a1ee8ae693f" style="height: auto; min-width: 30px; min-height: 30px; width: 924px; left: 18px; top: 96px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 76%;">
+<p>When the program runs, those <em><strong>function declaration</strong></em> statements work <em>like</em> this:</p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 947px; left: 7px; top: 17px;" data-block-id="e29729700b54ec6fc7ee9778c511e44b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:48px"><strong>Invoke After A Function Expression</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="02ea56ebc41fa52ff11b86c6db1738ea" style="height: auto; min-width: 30px; min-height: 30px; width: 852px; left: 96px; top: 108px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p>JavaScript interpreter will think that we are writing a<br>
+“<em><strong>function declaration</strong></em>” when we start with the keyword<br>
+“<em><strong>function</strong></em>” as a JavaScript “<em><strong>statement</strong></em>”.</p>
+
+<p>We can to force it to think about “<span style="color:#000080"><em><strong>an expression</strong></em></span>” using the <span style="color:#000080"><em><strong>grouping operator</strong></em></span>.  In fact, any appropriate <em><strong><span style="color:#000080">operator</span></strong></em> would<br>
+work just fine if you do not care about the return value.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 769px; height: 281px; left: 96px; top: 389px;" data-block-id="4f7f8f1f7cf9027180c85d40ffc0af2a">
+    <div class="sl-block-content" style="z-index: 13; font-size: 130%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>(function () {
+    return 123;
+}());                                    // 123
+
+
+(function(){ return 'hi'; })();          // "hi"
+!function(){ console.log('ya'); }();     // true
+void function(){ console.log('ya'); }(); // undefined</code></pre>
+    </div>
+</div></section>
+
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; width: 245px; left: 0px; top: 0px;" data-block-id="99558c422a3b07a57e504e2f554aeb91">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Definition</span></p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; width: 917px; left: 37px; top: 113px;" data-block-id="5ac98becce04631f5ad9bda387e3e39a">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; font-size: 260%;">
+			<p>
+				A <span style="color:#B22222">method</span> is <em>a <strong>function</strong></em><br>
+				as <em>some object's property</em>
+			</p>
+		</div>
+	</div>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 598px; left: 80px; top: 514px;" data-block-id="43270137b3f37e7ed62d5b589b616aba">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 60%;">
+			<p><span style="color:#800080">The property which contains a value that<br>
+				references to some function is called a “method.”</span><br>
+				<br>
+				<span style="color:rgb(128, 0, 128)">So is the referenced function.</span>
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 515px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+<pre class="javascript"><code>(function(){
+    'use strict';
+    // variable declaration
+    var periodTimeHolder, ccHolder, period, leftTime, step, min;
+
+...
+
+    // variable assignment
+    step = 1000;
+    min = 0;
+    window.setInterval(function(){
+
+      // change value assigned to a variable
+      leftTime = leftTime - step;
+      periodTimeHolder.textContent = leftTime;
+
+....
+
+    }, step);
+})();</code></pre></div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CmYl/2">https://repl.it/CmYl/2</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+
+<section>
+<div class="sl-block" data-block-type="code" style="width: 660px; height: 417px; left: 150px; top: 150px;" data-block-id="a7e2587806d0b96c7016c72232ab5636">
+    <div class="sl-block-content" style="z-index: 11; font-size: 160%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>// The cat object has three properties
+// cat.age, cat.meow, and cat.sleep
+
+var cat = {
+    age: 3,
+    meow: function () {}
+};
+cat.sleep = function () {};
+
+// We would say that cat.meow and
+// cat.sleep are "methods" of cat</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="f48309ad55de566e9b576f01d678a30f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>Methods of An Object</strong></span></p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 734px; left: 146px; top: 112px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;" dir="ui">
+<p style="text-align:left"><span style="font-size:32px">When a function is invoked <em><strong>as a method</strong></em> of<br>
+some object, the <span style="color:#B22222"><em><strong>this</strong></em></span> value during the function<br>
+call is <span style="color:#A9A9A9">(<em>usually</em>)</span> bound to that object at <em><strong>run-time</strong></em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="f6bb2de2a177b2b4c0796b585452b703"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>Refer To The Object Inside A Method</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 654px; height: 415px; left: 154px; top: 262px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var cat = {
+    age: 3,
+    meow: function () {
+        console.log(this.sound);
+        return this.age;
+    },
+    sound: 'meow~~'
+};
+
+cat.meow(); // 3  ("meow~~" is printed)
+
+var m = cat.meow;
+m(); // TypeError or undefined</code></pre>
+    </div>
+</div>
+</section>
+
+
+<!-- START exercise 2 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					TODO
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="code" style="width: 844px; height: 381px; left: 108px; top: 281px;" data-block-id="508be5e53982dce536e18f99c176240f">
+		<div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+				<pre class="javascript"><code></code></pre>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 1</span></p>
+		</div>
+	</div>
+</section>
+
+
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 425px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+
+<pre class="javascript"><code>&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt; connections &lt;/title&gt;
+        &lt;meta name="description" content="Help people find connected entities/values in their database."&gt;
+        &lt;meta name="author" content="Marcellin Nshimiyimana"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="js/index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CnL7">https://repl.it/CnL7</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+<!-- END exercise 2 -->
+
+
+
+<section>
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="cd88612ad466d13dbcc2b60be13953eb">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255);">
+			<h1>Closures</h1>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 515px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+<pre class="javascript"><code>(function(){
+    'use strict';
+    // variable declaration
+    var periodTimeHolder, ccHolder, period, leftTime, step, min;
+
+...
+
+    // variable assignment
+    step = 1000;
+    min = 0;
+    window.setInterval(function(){
+
+      // change value assigned to a variable
+      leftTime = leftTime - step;
+      periodTimeHolder.textContent = leftTime;
+
+....
+
+    }, step);
+})();</code></pre></div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CmYl/2">https://repl.it/CmYl/2</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+
+<section><div class="sl-block" data-block-type="text" style="height: auto; width: 245px; left: 0px; top: 0px;" data-block-id="ab8f5e0013a3073ae8c22265a85a445a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; padding: 10px; background-color: rgb(7, 55, 99);">
+<p><span style="color:#FFFFFF">Definition</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 952px; left: 4px; top: 108px;" data-block-id="15f48acb8a73a15dba8f93d64fb8e231"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<p><span style="font-size:72px">A <span style="color:#B22222">closure</span> is a <em><strong>pair</strong></em> of<br>
+a <em><strong>function </strong></em>and an <em><strong>environment<br>
+​</strong></em>for resolving <em><a href="https://en.wikipedia.org/wiki/Free_variables_and_bound_variables" target="_blank">free</a> variables</em></span></p>
+</div></div></section><section>
+<div class="sl-block" data-block-type="text" data-block-id="57f5caf8e7684fa72f32252153708328" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>When we use <em><strong><span style="color:#B22222">non-local</span> variables</strong></em>...</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 640px; height: 560px; left: 160px; top: 140px;" data-block-id="e4f41d14f515e8e4df0485f27ff14efb">
+    <div class="sl-block-content" style="z-index: 11; border: 20px solid rgb(63, 63, 63); font-size: 125%;">
+        <pre class="javascript"><code>
+
+    var a = 1;
+    var closureFunc = function () {
+        // The "environment" (the outer scope)
+        // determines to which value does the
+        // symbol `a` resolve here
+        console.log(a);
+        return a;
+    };</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 949px; left: 6px; top: 17px;" data-block-id="14aac8225a827314fa207177aff2fdcd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>The Lexical Environment (1/3)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 33px; left: 147px; top: 210px;" data-block-id="4fdb36c6b7f20dbdfea577bd4665620a"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 14; opacity: 0.7;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 62 33"><polygon points="0,9.9 31,9.9 31,0 62,16.5 31,33 31,23.099999999999998 0,23.099999999999998" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div></section><section>
+<div class="sl-block" data-block-type="code" style="width: 640px; height: 560px; left: 160px; top: 140px;" data-block-id="62383335a95c7f4d4796c8d72de9e3b0">
+    <div class="sl-block-content" style="z-index: 10; border: 20px solid rgb(63, 63, 63); font-size: 125%;">
+        <pre class="javascript"><code>
+
+    var a = 1;
+    var closureFunc = function () {
+        // The "environment" (the outer scope)
+        // determines to which value does the
+        // symbol `a` resolve here
+        console.log(a);
+        return a;
+    };
+
+
+    closureFunc(); // 1
+
+    a = 100;
+    closureFunc(); // 100
+
+    a = 'hello';
+    closureFunc(); // 'hello'</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 90px;" data-block-id="27ea6d6b7bdd33a2e566ef7acdb2e900"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>When we use <em><strong><span style="color:#B22222">non-local</span> variables</strong></em>...</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 949px; left: 6px; top: 17px;" data-block-id="9563c11ab8b48b8e77c109ff345f5844"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>The Lexical Environment (2/3)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 33px; left: 147px; top: 210px;" data-block-id="42e0fcf4dee9db5861c75762940e5e59"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 14; opacity: 0.7;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 62 33"><polygon points="0,9.9 31,9.9 31,0 62,16.5 31,33 31,23.099999999999998 0,23.099999999999998" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 949px; left: 6px; top: 17px;" data-block-id="7ab8b4d8c33e2721904049fc3bddb29d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:48px"><strong>The Lexical Environment (3/3)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 640px; height: 560px; left: 160px; top: 140px;" data-block-id="83f5da057000e9e29b60b0f432d67627">
+    <div class="sl-block-content" style="z-index: 11; border: 20px solid rgb(63, 63, 63); font-size: 125%;">
+        <pre class="javascript"><code>
+
+    var a = 1;
+    var closureFunc = function () {
+        // The "environment" (the outer scope)
+        // determines to which value does the
+        // symbol `a` resolve here
+        console.log(a);
+        return a;
+    };
+
+
+
+    var anotherFunc = function () {
+        var a = 2;
+        return closureFunc();
+    };
+
+    anotherFunc(); // 1</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 940px; left: 10px; top: 90px;" data-block-id="c09c03bbf9d4f1f5a1057d8a6cc86a25"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>The “<span style="color:#0000CD"><em><strong>environment</strong></em></span>” is determined at <span style="color:#0000CD"><em><strong>creation-time</strong></em></span>, not at run-time</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="64a709809ebe1a419732480b3483c39c" style="min-width: 4px; min-height: 4px; width: 62px; height: 33px; left: 147px; top: 210px;"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 13; opacity: 0.7;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 62 33"><polygon points="0,9.9 31,9.9 31,0 62,16.5 31,33 31,23.099999999999998 0,23.099999999999998" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 33px; left: 147px; top: 503px;" data-block-id="d067fecb0876ade74167a32cd3ba0b71"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 14; opacity: 0.3;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 62 33"><polygon points="0,9.9 31,9.9 31,0 62,16.5 31,33 31,23.099999999999998 0,23.099999999999998" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 119px; left: 10px; top: 210px;" data-block-id="2d4346d164abe172fc2f5aa53863b4c8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(255, 255, 255); font-size: 49%; border-style: solid; border-radius: 15px; padding: 5px; opacity: 0.75; background-color: rgb(166, 77, 121);">
+<p>Lexical scope</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 145px; left: 0px; top: 496px;" data-block-id="438e79b7ecdb74308d161ec73a5ca946"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(255, 255, 255); font-size: 49%; border-style: solid; border-radius: 15px; padding: 5px; opacity: 0.5; background-color: rgb(166, 77, 121);">
+<p>Dynamic scope<br>
+(not for JavaScript)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 268px; left: 0px; top: 325px;" data-block-id="4eb40d646f1885bce0f30eccf99864fc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(255, 255, 255); font-size: 47%; border: 6px solid rgb(166, 77, 121); border-radius: 15px; padding: 5px; text-align: left; background-color: rgb(166, 77, 121);">
+<p>Which <span style="color:#FFFF00"><em><strong>variable</strong></em></span> is the identifier “<span style="color:#00FFFF"><em><strong>a</strong></em></span>” here<br>
+<span style="color:#FFFF00"><em><strong>bound to</strong></em></span> when the function is invoked?</p>
+</div></div></section><section>
+<div class="sl-block" data-block-type="code" style="width: 640px; height: 560px; left: 160px; top: 140px;" data-block-id="d40e055e0acca2938f8f0e3ee2954f0a">
+    <div class="sl-block-content" style="z-index: 10; border: 20px solid rgb(63, 63, 63); font-size: 125%;">
+        <pre class="javascript"><code>var getClosureFunc = function () {
+
+    var a = 1;
+    var closureFunc = function () {
+        // The "environment" (the outer scope)
+        // determines to which value does the
+        // symbol `a` resolve here
+        console.log(a);
+        return a;
+    };
+
+    return closureFunc;
+};
+
+
+var a = 3;
+var clsr = getClosureFunc();
+
+clsr(); // 1</code></pre>
+    </div>
+</div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 957px; left: 2px; top: 17px;" data-block-id="1511a4ca66babaafbd758374db555c7f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:48px"><strong>Common Way To Create A Closure (1/3)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 940px; left: 10px; top: 90px;" data-block-id="affcc16c685b9e94626c1cac13381936"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: center;">
+<p>A function that <span style="color:#0000CD"><em><strong>returns</strong></em></span> a <span style="color:#008080"><em><strong>closure function</strong></em></span>...</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 257px; left: 554px; top: 535px;" data-block-id="51c1a6a53e56a7d9e87313eddeaa5632"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 255); font-size: 60%; border: 6px solid rgb(166, 77, 121); border-radius: 15px; padding: 5px; text-align: left; background-color: rgb(166, 77, 121);">
+<p>A <span style="color:#FFFF00"><em><strong>closure</strong></em></span> is created each time<br>
+<span style="color:#40E0D0"><strong>getClosureFunc</strong></span> returns.</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 461px; height: 4px; left: 380px; top: 216px;" data-block-id="b195ef09de10b7cf4fb2e225e854790b"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 461 4"><rect width="461" height="4" class="shape-element" fill="rgb(166, 77, 121)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 352px; height: 4px; left: 489px; top: 346px;" data-block-id="1668f803f0d30b5a1b0d4a2f0e4ea7a2"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 352 4"><rect width="352" height="4" class="shape-element" fill="rgb(166, 77, 121)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 4px; height: 130.5px; left: 837px; top: 225.5px;" data-block-id="e8b2458b18d883583b4b439355af121d"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 17;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 4 130"><rect width="4" height="130" class="shape-element" fill="rgb(166, 77, 121)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="e20f6321c013e39096fdb5603d9f29cb" style="min-width: 4px; min-height: 4px; width: 29px; height: 20px; left: 366px; top: 216px;"><div class="sl-block-content" data-shape-type="triangle-left" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 29 20"><polygon points="0,10 29,0 29,20" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 33px; left: 98px; top: 552px;" data-block-id="0c2c0f979f188976e777d7881aeeefbb"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 62 33"><polygon points="0,9.9 31,9.9 31,0 62,16.5 31,33 31,23.099999999999998 0,23.099999999999998" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div></section><section>
+<div class="sl-block" data-block-type="code" style="width: 640px; height: 560px; left: 160px; top: 140px;" data-block-id="1025aee750274b739f4d106e9dcf2759">
+    <div class="sl-block-content" style="z-index: 10; border: 20px solid rgb(63, 63, 63); font-size: 125%;">
+        <pre class="javascript"><code>var getClosureFunc = function () {
+
+    var a = 1;
+    return function () {
+        // The "environment" (the outer scope)
+        // determines to which value does the
+        // symbol `a` resolve here
+        console.log(a);
+        return a;
+    };
+
+
+};
+
+
+var a = 3;
+var clsr = getClosureFunc();
+
+clsr(); // 1</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 940px; left: 10px; top: 90px;" data-block-id="520ce4de75bd6e1f93620b482fe68106"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: center;">
+<p>A function that <span style="color:#0000CD"><em><strong>returns</strong></em></span> a <span style="color:#008080"><em><strong>closure function</strong></em></span>...</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 957px; left: 2px; top: 17px;" data-block-id="2460b50222ed7f24ba27c6b46f085ea5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>Common Way To Create A Closure (2/3)</strong></span></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 461px; height: 4px; left: 380px; top: 216px;" data-block-id="81e29ecb73f07da3995d3fdc225a1c60"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 461 4"><rect width="461" height="4" class="shape-element" fill="rgb(166, 77, 121)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 352px; height: 4px; left: 489px; top: 346px;" data-block-id="44a5c8da8dcdf5bb2c07e4c583556744"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 352 4"><rect width="352" height="4" class="shape-element" fill="rgb(166, 77, 121)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 4px; height: 130.5px; left: 837px; top: 226px;" data-block-id="894c6fba41c4b98b4b12196f8c41d8cf"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 4 131"><rect width="4" height="131" class="shape-element" fill="rgb(166, 77, 121)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 29px; height: 20px; left: 366px; top: 216px;" data-block-id="f9bc600fd2fc006075ac5a5c28a36805"><div class="sl-block-content" data-shape-type="triangle-left" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 17;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 29 20"><polygon points="0,10 29,0 29,20" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div>
+
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 33px; left: 98px; top: 552px;" data-block-id="935a1bef6cef9f5a300a7c3e6c820d06"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 62 33"><polygon points="0,9.9 31,9.9 31,0 62,16.5 31,33 31,23.099999999999998 0,23.099999999999998" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 257px; left: 554px; top: 535px;" data-block-id="371a2c5816089d4f8dc7f55c7569d124"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(255, 255, 255); font-size: 60%; border: 6px solid rgb(166, 77, 121); border-radius: 15px; padding: 5px; text-align: left; background-color: rgb(166, 77, 121);">
+<p>A <span style="color:#FFFF00"><em><strong>closure</strong></em></span> is created each time<br>
+<span style="color:#40E0D0"><strong>getClosureFunc</strong></span> returns.</p>
+</div></div></section><section>
+<div class="sl-block" data-block-type="code" style="width: 640px; height: 560px; left: 160px; top: 140px;" data-block-id="d85ef31c1eccb2b7e6bbed6a901bd0cd">
+    <div class="sl-block-content" style="z-index: 10; border: 20px solid rgb(63, 63, 63); font-size: 125%;">
+        <pre class="javascript"><code>var clsr = (function () {
+
+    var a = 1;
+    return function () {
+        // The "environment" (the outer scope)
+        // determines to which value does the
+        // symbol `a` resolve here
+        console.log(a);
+        return a;
+    };
+
+
+}());
+
+
+var a = 3;
+
+
+clsr(); // 1</code></pre>
+    </div>
+</div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 940px; left: 10px; top: 90px;" data-block-id="a3182c7df03e745ca93deb7bfaafce89"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: center;">
+<p>A function that <span style="color:#0000CD"><em><strong>returns</strong></em></span> a <span style="color:#008080"><em><strong>closure function</strong></em></span>...  gets <em><strong>invoked</strong></em> immediately</p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 957px; left: 2px; top: 17px;" data-block-id="857de2d6b58b25fe6a115bf00ea79e81"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>Common Way To Create A Closure (3/3)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 461px; height: 4px; left: 380px; top: 216px;" data-block-id="b05d3bb2e72ec3cc7106a8be48dabc05"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 461 4"><rect width="461" height="4" class="shape-element" fill="rgb(166, 77, 121)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 352px; height: 4px; left: 489px; top: 346px;" data-block-id="279c71067daa971f2a04a760893853b9"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 352 4"><rect width="352" height="4" class="shape-element" fill="rgb(166, 77, 121)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 4px; height: 130.5px; left: 837px; top: 226px;" data-block-id="a6d7aa61d7ee6dbc48ba2597ef171832"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 4 131"><rect width="4" height="131" class="shape-element" fill="rgb(166, 77, 121)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 29px; height: 20px; left: 366px; top: 216px;" data-block-id="5993fa8d72019a1a6616b657f92112e0"><div class="sl-block-content" data-shape-type="triangle-left" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 17;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 29 20"><polygon points="0,10 29,0 29,20" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 260px; left: 489px; top: 386px;" data-block-id="be75ca2218e137131c54f4a8352b05e1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(255, 255, 255); font-size: 60%; border: 6px solid rgb(166, 77, 121); border-radius: 15px; padding: 5px; text-align: left; background-color: rgb(166, 77, 121);">
+<p>A <span style="color:#FFFF00"><em><strong>closure</strong></em></span> is created when the<br>
+anonymous function returns.</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 62px; height: 33px; left: 98px; top: 455px;" data-block-id="b650508ad3fdc3784c661060f482eee7"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(166, 77, 121)" data-shape-stretch="true" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 62 33"><polygon points="0,9.9 31,9.9 31,0 62,16.5 31,33 31,23.099999999999998 0,23.099999999999998" class="shape-element" fill="rgb(166, 77, 121)"></polygon></svg></div></div></section><section><div class="sl-block" data-block-type="text" data-block-id="fc54ed1c63bb9b0552c1ccbeeddf4273" style="height: auto; min-width: 30px; min-height: 30px; width: 906px; left: 27px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 115%;" dir="ui">
+<p><em><strong>How</strong></em> a variable/identifier/symbol inside a function <em><strong>will be<br>
+resolved</strong></em> for all function calls in the future is completely<br>
+determined at the <span style="color:#B22222"><em><strong>creation-time</strong></em></span> of the function already</p>
+
+<p> </p>
+
+<p>except for “<span style="color:#000080"><em><strong>this</strong></em></span>”.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 949px; left: 6px; top: 17px;" data-block-id="c7b24d40d7e6134c719266950e3c11d2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>JavaScript Uses Static/Lexical Scope Model</strong></span></p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="bb64cd157d5500e7219cf1492c0ca07c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:48px"><strong>Lifetime of A Lexical Scope/Environment</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 864px; left: 70px; top: 103px;" data-block-id="a89bbe4c2517a904a5575f3e3541bd50"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<p>The <span style="color:#B22222"><em><strong>lifetime</strong></em></span> of the <span style="color:#008080"><em><strong>local variables</strong></em></span> (the environment/scope) does<br>
+<span style="color:#B22222"><em><strong>not</strong></em></span> necessarily end as the <em><strong>function</strong></em> returns.  If there is any local variable referenced by a <span style="color:#0000CD"><em><strong>returned function</strong></em></span>, a <em><strong>closure</strong></em> is created.<br>
+Only the <span style="color:#0000CD"><em><strong>returned functions</strong></em></span> can access those <span style="color:#008080"><em><strong>hidden private states</strong></em></span>.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 572px; height: 395px; left: 194px; top: 305px;" data-block-id="08e786442e139761c5b284e79b217b86">
+    <div class="sl-block-content" style="z-index: 13; border: 20px solid rgb(63, 63, 63); font-size: 130%;">
+        <pre class="javascript"><code>var x = 999;
+
+var f = function () {
+    var x = 222;            // *1
+    return function () {
+        x += 100;
+        return x;           // *2
+    };
+};
+
+var g = f();                // *3
+g();        // 322          // *4
+g();        // 422          // *5</code></pre>
+    </div>
+</div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="80aba03fcd3359d80625c3f4f77a56d2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:48px"><strong>Rethinking Named Function Expressions</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 930px; left: 15px; top: 107px;" data-block-id="1b3abe768028f821a6e4e14791c930d1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>A <em><strong>named function expression</strong></em> creates a closure<br>
+with the <em><strong>free variable of that name</strong></em> bound to <em><strong>the function itself</strong></em>.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 594px; height: 490px; left: 183px; top: 210px;" data-block-id="e9c825ba799115018d981668eaec1dfc">
+    <div class="sl-block-content" style="z-index: 13; border: 20px solid rgb(63, 63, 63); font-size: 130%;">
+        <pre class="javascript"><code>var f = function fac(n) {
+    if (n === 0) return 1;
+    if (n &gt; 0) return n * fac(n - 1);
+};
+
+//----- The above code works like: -----
+
+var f = (function () {
+
+    var fac = function (n) {
+        if (n === 0) return 1;
+        if (n &gt; 0) return n * fac(n - 1);
+    };
+
+    return fac;
+
+}());</code></pre>
+    </div>
+</div></section>
+
+
+<!-- START exercise 2 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					TODO
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 1</span></p>
+		</div>
+	</div>
+</section>
+
+
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 425px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+
+<pre class="javascript"><code>&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt; connections &lt;/title&gt;
+        &lt;meta name="description" content="Help people find connected entities/values in their database."&gt;
+        &lt;meta name="author" content="Marcellin Nshimiyimana"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="js/index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CnL7">https://repl.it/CnL7</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+<!-- END exercise 2 -->
+
+
+
+<section>
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 173px; height: auto;" data-block-id="8eda7ae28bb59d526c14647a25b4d046">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255);">
+			<h1>
+				<br>
+				Arrays
+			</h1>
+		</div>
+	</div>
+</section>
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 515px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+<pre class="javascript"><code>(function(){
+    'use strict';
+    // variable declaration
+    var periodTimeHolder, ccHolder, period, leftTime, step, min;
+
+...
+
+    // variable assignment
+    step = 1000;
+    min = 0;
+    window.setInterval(function(){
+
+      // change value assigned to a variable
+      leftTime = leftTime - step;
+      periodTimeHolder.textContent = leftTime;
+
+....
+
+    }, step);
+})();</code></pre></div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CmYl/2">https://repl.it/CmYl/2</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+
+
+<section><div class="sl-block" data-block-type="code" style="width: 277px; height: 330px; left: 123px; top: 221px;" data-block-id="0a22c249a30b8809dc4ca800e346bd6a">
+    <div class="sl-block-content" style="z-index: 11; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var w = [
+    "test",
+    1234,
+    {},
+    [],
+    "hi"
+];
+
+w[4]; // "hi"</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="9c833f18e443e1911614e667dd5bc38d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>Array Initialiser (Array Literal)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 181px; top: 114px;" data-block-id="a4879faf608c4ba21c562839146bc575"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>The notation using a pair of square brackets<br>
+to <em><strong>create</strong></em>/<em><strong>initialize</strong></em> a JavaScript <em><strong>Array</strong></em> object.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 384px; height: 330px; left: 480px; top: 221px;" data-block-id="2c9018da5d07afe7272111a807f5bc03">
+    <div class="sl-block-content" style="z-index: 14; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var w = new Array(5);
+w[0] = "test";
+w[1] = 1234;
+w[2] = new Object();
+w[3] = new Array();
+w[4] = "hi";
+
+
+w[4]; // "hi"</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 572px;" data-block-id="2a2604c6462bfc51bc2fddfd86b71c56"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><span style="font-size:24px">The code on the left-hand side has exactly the<br>
+same result as the one on the right-hand side</span></p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 951px; left: 5px; top: 17px;" data-block-id="c6076a9779160b791ca5be6b517af32e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:48px"><strong>Append New Elements To An Array</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 741px; height: 479px; left: 123px; top: 221px;" data-block-id="7ab672f19a7f283b4677a8ab6a6fbaf6">
+    <div class="sl-block-content" style="z-index: 11; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var arr = [ "test", 1234, {}, [], "hi" ];
+
+arr.push("sixth"); // 6
+arr.length;        // 6
+arr[5];            // "sixth"
+
+arr[7] = 012;      // 10
+arr.length;        // 8
+
+arr[6];            // undefined
+arr[7];            // 10
+
+arr[8];            // undefined
+arr.length;        // 8</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 838px; left: 62px; top: 114px;" data-block-id="7546d183baa3a831469a87162d2e9cb6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>There is a method “push” for all Array objects.<br>
+Or you can just assign a value to the corresponding slot.</p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="c2a02576e9287595250d58fce4b5fc39"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:48px"><strong>Enumerate All Elements In An Array (1/3)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 725px; height: 330px; left: 118px; top: 210px;" data-block-id="2017c853c37d71edf28696428234dc4b">
+    <div class="sl-block-content" style="z-index: 11; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var arr = [ "test", 1234, {}, [], "hi" ];
+
+for (var i = 0; i &lt; arr.length; i += 1) {
+    console.log(arr[i]);
+}</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" data-block-id="6bd6e67ba4ff291abe9c1b9e1c7bc12f" style="height: auto; min-width: 30px; min-height: 30px; width: 848px; left: 56px; top: 121px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>There is a special property “length” for any Array object.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 510px; left: 225px; top: 569px;" data-block-id="f80ea7de95c1553dbfd005f4cc07bd28"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 255); font-size: 70%; border: 10px solid rgb(166, 77, 121); border-radius: 15px; padding: 5px; background-color: rgb(166, 77, 121);">
+<p>NOTE:  A “<span style="color:#FFFF00">For-loop</span>” is <span style="color:#00FFFF"><em><strong>not</strong></em></span> always recommanded<br>
+for enumerating all elements in an array, because...</p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="dd564199fb509fdcc6e32bcbfd5b3e0b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:48px"><strong>Enumerate All Elements In An Array (2/3)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 725px; height: 330px; left: 118px; top: 210px;" data-block-id="ead4ce83ef069fd33f35c15a8a70f211">
+    <div class="sl-block-content" style="z-index: 11; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var arr = [ "test", 1234, {}, [], "hi" ];
+
+arr.forEach(function (val /*, i, arr*/) {
+    console.log(val);
+});
+// undefined</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 848px; left: 56px; top: 121px;" data-block-id="06f553c65979afdb41b543ad14b8141e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>There is a special method “forEach” for any Array object.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 450px; left: 256px; top: 582px;" data-block-id="2adac865a0c8530fa7ecdc1220fd1d85"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 255); font-size: 70%; border: 10px solid rgb(166, 77, 121); border-radius: 15px; padding: 5px; background-color: rgb(166, 77, 121);">
+<p>The “<em><strong><span style="color:#FFFF00">forEach</span></strong></em>” method is much nicer...</p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 19px; top: 17px;" data-block-id="7962fb55613ec8c508e22690dbff8cbe"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:48px"><strong>Enumerate All Elements In An Array (3/3)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 725px; height: 378px; left: 118px; top: 210px;" data-block-id="559adc769e9139fb46345e05e4698712">
+    <div class="sl-block-content" style="z-index: 11; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var arr = [ "test", 1234, {}, [], "hi" ];
+
+arr.map(function (val /*, i, arr*/) {
+    return typeof val;
+});
+// [ "string",
+//   "number",
+//   "object",
+//   "object",
+//   "string" ]</code></pre>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 848px; left: 56px; top: 121px;" data-block-id="a27edf79039962787b90c88c6b355864"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>There is a special method “map” for any Array object.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 746px; left: 107px; top: 602px;" data-block-id="b759fa3df2e62dd1eb9302cf2e82f1b4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 255); font-size: 70%; border: 10px solid rgb(166, 77, 121); border-radius: 15px; padding: 5px; background-color: rgb(166, 77, 121);">
+<p>We even have functional “<em><strong><span style="color:#FFFF00">map</span></strong></em>”, “<span style="color:#FFFF00"><em><strong>every</strong></em></span>”, “<span style="color:#FFFF00"><em><strong>some</strong></em></span>”, ...   See the <strong><a href="https://gist.github.com/concise/a20b3e5d7e9c61dfbcc5#file-your-cheat-sheet-js-L344-L363" target="_blank"><span style="color:#00FFFF">notes</span></a></strong> for more info</p>
+</div></div></section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; width: 889px; left: 50px; top: 121px;" data-block-id="7298ed609e4a60f4d77a9d71a9059f16"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p>Calling <span style="color:#B22222">Object.keys( ... )</span> gives you all <strong>enumerable</strong> “<span style="color:#008080"><em><strong>keys</strong></em></span>” in an object</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 941px; left: 10px; top: 17px;" data-block-id="5bc0ebd491f68a8040e551b685de5a38"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>How You Can Enumerate An “<em>Object</em>” (1/2)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 725px; height: 329px; left: 118px; top: 231px;" data-block-id="302f630cd864955b53d810ddcbfacdb1">
+    <div class="sl-block-content" style="z-index: 13; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var obj = { a: "test", b: 1234, c: "hi" };
+
+Object.keys(obj); // [ "a", "b", "c" ]</code></pre>
+    </div>
+</div></section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; width: 890px; left: 50px; top: 121px;" data-block-id="745de112ccc9de3ed46c42f7ccee300d">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+			<p>Calling <span style="color:#B22222">Object.keys( ... )</span> with <span style="color:#B22222">map</span> gives you all <strong>enumerable</strong> “<span style="color:#008080"><em><strong>values</strong></em></span>”</p>
+		</div>
+	</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 941px; left: 10px; top: 17px;" data-block-id="44c959684f23feb04ced41fe2b91efe1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:48px"><strong>How You Can Enumerate An “<em>Object</em>” (2/2)</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 725px; height: 329px; left: 118px; top: 231px;" data-block-id="086505c16412846e1e195884530366f8">
+    <div class="sl-block-content" style="z-index: 0; font-size: 150%; border: 20px solid rgb(63, 63, 63);">
+        <pre class="javascript"><code>var obj = { a: "test", b: 1234, c: "hi" };
+
+Object.keys(obj).map(function (key) {
+    return obj[key];
+});
+// [ "test",
+//    1234,
+//    "hi" ]</code></pre>
+    </div>
+</div>
+</section>
+
+<!-- START exercise 2 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					TODO
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 1</span></p>
+		</div>
+	</div>
+</section>
+
+
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 425px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+
+<pre class="javascript"><code>&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt; connections &lt;/title&gt;
+        &lt;meta name="description" content="Help people find connected entities/values in their database."&gt;
+        &lt;meta name="author" content="Marcellin Nshimiyimana"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="js/index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CnL7">https://repl.it/CnL7</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+<!-- END exercise 2 -->
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 106px; height: auto;" data-block-id="99d61d3e67886ad018b2af6e0567a2ce">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255);" dir="ui">
+
+
+			<h1><br>Control Flow</h1>
+
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 738px; left: 128px; top: 108px;" data-block-id="848fccf6e091c35a5903af3761fd276d">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+			<p>
+				TODO
+			</p>
+
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 395px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Loops</span></p>
+		</div>
+	</div>
+
+
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 738px; left: 128px; top: 108px;" data-block-id="848fccf6e091c35a5903af3761fd276d">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+			<p>
+				TODO
+			</p>
+
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 395px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">in</span></p>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 738px; left: 128px; top: 108px;" data-block-id="848fccf6e091c35a5903af3761fd276d">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+			<p>
+				TODO
+			</p>
+
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 395px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">implicit conditional form</span></p>
+		</div>
+	</div>
+</section>
+
+<!-- START exercise 2 -->
+<section>
+<section>
+	<div class="sl-block" data-block-type="text" data-block-id="7d625a491d4355a2770b84549496af0f" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 134px; top: 117px;">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+			<p>
+				<span style="font-size:52px">
+					TODO
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 245px; left: 0px; top: 0px;" data-block-id="5e62a02ca57d0423bde34b820eb7cec6">
+		<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; padding: 10px; background-color: rgb(7, 55, 99);">
+			<p><span style="color:#FFFFFF">Exercice 1</span></p>
+		</div>
+	</div>
+</section>
+
+
+<section class="has-dark-background" data-background-color="#073763">
+<div class="sl-block" data-block-type="code" style="width: 854px; height: 425px; left: 54px; top: 62px;" data-block-id="81758e4783704e454b512ee8538628da">
+    <div class="sl-block-content" style="z-index: 13; font-size: 137%; border: 20px solid rgb(63, 63, 63);">
+
+<pre class="javascript"><code>&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt; connections &lt;/title&gt;
+        &lt;meta name="description" content="Help people find connected entities/values in their database."&gt;
+        &lt;meta name="author" content="Marcellin Nshimiyimana"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="js/index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 834px; left: 46px; top: 612px;" data-block-id="bc6c44bea54427ae729543ffbd4d4c04" style="color: rgb(255, 255, 255);">
+	<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left; color: rgb(255, 255, 255);" dir="ui">
+		<p style="text-align:left">
+			<span style="font-size:32px">
+				Refer to <a href="https://repl.it/CnL7">https://repl.it/CnL7</a> for complete piece of code.
+			</span>
+		</p>
+	</div>
+</div>
+</section>
+
+</section>
+<!-- END exercise 2 -->
+
+
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 106px; height: auto;" data-block-id="99d61d3e67886ad018b2af6e0567a2ce">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255);" dir="ui">
+
+
+			<h1> <br> Next <br> jQuery</h1>
+
+		</div>
+	</div>
+</section>
+
+<section class="has-dark-background" data-background-color="#073763">
+	<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 106px; height: auto;" data-block-id="99d61d3e67886ad018b2af6e0567a2ce">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255);" dir="ui">
+
+
+			<h1> <br> Next <br> Emberjs </h1>
+
+		</div>
+	</div>
+</section>
+
+<section class="has-light-background" data-background-color="#d6c3a3">
+	<div class="sl-block" data-block-type="text" style="width: 942px; left: 9px; top: 64px; height: auto;" data-block-id="8c1ca78e5a711ff8ec3da292f3cf7891">
+		<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(68, 68, 68); font-size: 90%;" dir="ui">
+			<h1>Keep Books/Google As Reference</h1>
+		</div>
+	</div>
+<div class="sl-block" data-block-type="text" data-block-id="2d3b0b5ef10b6b04713142d0e449949e" style="height: auto; min-width: 30px; min-height: 30px; width: 829px; left: 51px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 135%;" dir="ui">
+<ul>
+	<li style="text-align:left"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank"><span style="color:#008080">MDN “A re-introduction to JavaScript”</span></a></li>
+	<li style="text-align:left"><a href="https://bonsaiden.github.io/JavaScript-Garden/" target="_blank"><span style="color:#008080">“JavaScript Garden” tutorial and notes</span></a></li>
+	<li style="text-align:left"><a href="http://eloquentjavascript.net/" target="_blank"><span style="color:#008080">“Eloquent JavaScript” free book online</span></a></li>
+	<li style="text-align:left"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><span style="color:#008080">MDN JavaScript Reference Page</span></a></li>
+</ul>
+</div></div></section>
+			</div>
+		</div>
+
+
+
+<script>
+	var SLConfig = {"deck":{"id":360488,"slug":"js","title":"concise JavaScript","description":"A concise and accurate JavaScript tutorial/notes written for those entering the JavaScript world for the first time but already have experience with other languages","visibility":"all","published_at":"2015-03-06T14:56:30.242Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/5f029b/decks.jpg","view_count":62871,"user":{"id":289362,"username":"concise","name":"Jong-Shian Wu","description":"Programming.  Cryptography.  System Security.  Web.  Embedded System.  JavaScript.  Python.  C.  Hacking.","thumbnail_url":"https://www.gravatar.com/avatar/01ebd16f8805f9d877cfac96dd9a846c?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","pro":false,"team_id":null,"settings":{"id":116027,"present_controls":false,"present_upsizing":true,"present_notes":true}},"background_transition":"fade","transition":"none","theme_id":null,"theme_font":"news","theme_color":"sand-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":null,"slide_number":null,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":null}};
+</script>
+		<script defer="defer" src="js/consise/application-3b4f3a92649ab95159d1ce685cc4c448.js"></script>
+		<script defer="defer" src="js/consise/reveal.min-db6356123b7dd0a24e0b7a786f09c7ad.js"></script>
+	</body>
+</html>
