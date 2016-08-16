@@ -1,0 +1,8 @@
+.box {
+	border: 1px solid black;
+}
+
+.box-element {
+	border-bottom: 1px solid black;
+	padding-bottom: 5px;
+}

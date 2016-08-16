@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Javascript for the web</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Suman Kunwar">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="css/reveal.min.css" />
+	<link rel="stylesheet" id="theme" href="css/theme/beige.css" />
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<style type="text/css">
+	pre { box-shadow: 0 0 !important; }
+	code { box-shadow: 0 0 6px rgba(0, 0, 0, .3);  }
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+	document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<style>
+	.elgreg-slides img {
+		max-width: 50%;
+	}
+	</style>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<section>
+					<h1> Javascript for the web </h1>
+					<p> Marcellin Nshimiyimana </p>
+				</section>
+				<section>
+					<h2>About the Speaker</h2>
+					<div>
+						<ul>
+							<li> Marcellin Nshimiyimana </li>
+							<ul >
+								<li> Software Engineer @<a href="http://fusemachines.com/">Fusemachines </a></li>
+								<li> Blog @<a href="http://nshimiye.com/blog/"> Daily </a></li>
+								<!-- <li> Founder <a href="http://katiparxa.com/">Katiparxa </a></li>
+								<li> UI/UX, Interactive Design  </li>
+								<li> 4+ Industry Experience </li>
+								<li> Vedio Tutorails 800+ <a href="https://www.youtube.com/channel/UCOL9ZxzRX9lIvOliY_oz0Ng"> Design Code Blade</a></li> -->
+							</ul>
+							<!-- <li>Open Source Enthusiast</li>
+							<li>Soon-to-be Author</li>
+							<li>Loves the word HTML5</li> -->
+						</ul>
+						<div style="text-align: left;">
+							<br />
+						</div>
+					</div>
+				</section>
+			</section>
+
+
+			<section>
+				<p>
+					<span style="font-size: 3em; line-height: 1;">
+						Hackers <strong>Learn</strong>
+						<br>
+						By <s>Reading</s><br>
+						<strong>Making</strong> Stuff
+					</span>
+				</p>
+			</section>
+
+
+			<section>
+				<h2 title="What we are making : suchana kheti => information farming => data farming">
+					Kheti
+				</h2>
+				<div style="text-align: left;">
+					Meaning: Data Farming <br>
+					Goal: Help people find userful info on a company  <br>
+					User provides a site url and then the app provides interesting info on the company.
+				</div>
+			</section>
+			<section>
+				<h2>
+					Definition
+				</h2>
+				<img src="images/testing-definition.png" alt="process of finding out whether your program works"/>
+				<p>Process of finding out whether your program works.</p>
+			</section>
+			<section>
+				<h2>
+					Types of testing
+				</h2>
+				<ul>
+					<li>Unit</li>
+					<li>Integration</li>
+					<li>Acceptance</li>
+				</ul>
+			</section>
+			<section>
+				<h2>
+					Unit Testing
+				</h2>
+				<p>Goal: Make sure that there is always a consistent one-to-one mapping between inputs and outputs of self contained block.</p>
+				<!-- <ul>
+				<li><strong>Abstractions</strong></li>
+				<li><strong>Expressiveness</strong></li>
+				<li><strong>Cross-browser</strong></li>
+				<li><strong>Highly complete documentation</strong></li>
+			</ul> -->
+		</section>
+		<section>
+			<h2> self contained block </h2>
+			<p> An isolated chunk of code </p>
+		</section>
+		<section>
+			<h4> Example of self contained block </h4>
+			<p>The monitoring/md-user model</p>
+			<img src="images/code-block.png" alt="process of finding out whether your program works"/>
+		</section>
+		<section>
+			<h4> Unit Test for monitoring/md-user model </h4>
+			<img src="images/code-block-test.png" alt="test for the email address checker"/>
+		</section>
+		<section>
+			<h2> Integration Testing </h2>
+			<p>Goal: Make sure that the whole application/system does not fail, when self contained block is added tp this system</p>
+		</section>
+		<section>
+			<h4> Integration Test for monitoring-view component </h4>
+			<img src="images/monitoring-view-integration-test.png" alt="integration test"/>
+		</section>
+		<section>
+			<h2> Acceptance Testing </h2>
+			<p>Goal: Make sure that project's features are functional, and project's goals are met</p>
+		</section>
+		<section>
+			<h4> Acceptance Test for monitoring-view component </h4>
+			<!-- <img src="images/monitoring-view-integration-test.png" alt="integration test"/> -->
+			<p> LIVE CODING </p>
+		</section>
+
+		<section>
+			<h2> Refactoring </h2>
+			<p> The hard way => the bad way </p>
+		</section>
+		<section>
+			<h4> Unit Test for monitoring/md-user model </h4>
+			<img src="images/bad-unit-test.png" alt="unti test with external dependancy"/>
+		</section>
+		<section>
+			<h1> Any Questions ? </h1>
+		</section>
+	</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: true,
+
+	theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+	transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+	// Optional libraries used to extend on reveal.js
+	dependencies: [
+		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+	]
+});
+
+</script>
+
+</body>
+</html>
