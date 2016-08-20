@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Connections </title>
+
+    <meta name="name" content="connected entities">
+    <meta name="description" content="Help people find connected entities/values in their database.">
+    <meta name="author" content="Marcellin Nshimiyimana">
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="http://samai-stage.us-east-1.elasticbeanstalk.com/assets/sam-ai-ui-747a8a0d1de756cc695e77157381e32a.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/sam-ai-ui-747a8a0d1de756cc695e77157381e32a.css">
+  </head>
+  <body>
+    <div id="application" class="container">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class=" navbar-left">
+            <ul class="nav navbar-nav">
+              <li><a href="#">HOME</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+      <br>
+      <br>
+      <section id="entity" class="row" style="border: 1px solid #c7cacd; border-radius: 5px; margin-bottom: 1em; padding-top: 20px; margin-top: 90px;">
+        <div class="col-md-12">
+          <!-- START search input box -->
+          <div class="row">
+            <div class="col-md-12">
+              <form class="entity-search input-group" style="margin-bottom: 1em;">
+                <input type="text" class="form-control" placeholder="Name of the entity">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">GO</button>
+                </span>
+              </form>
+            </div>
+          </div>
+          <!-- END   search input box -->
+
+          <!-- START property list -->
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="entity-body panel panel-default">
+                <!-- Default panel contents -->
+                <!-- <div class="panel-heading">Panel heading</div> -->
+                <div class="entity-name panel-body">
+                  <p>Entity name</p>
+                </div>
+
+                <!-- List group -->
+                <ul class="entity-propert-list list-group">
+
+                  <li class="list-group-item"><!-- sample data -->
+                    <span class="property-category">Column</span> : <span class="property-name">First Name</span>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- END   property list -->
+        </div>
+      </section>
+      <hr>
+      <section id="connection-list" class="row" style="padding-top: 20px;">
+        <div class="col-md-12">
+          <!-- START entity-name list -->
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="entity-name-list list-group">
+
+                <a href="#" class="list-group-item"><!-- sample data -->
+                  <h4 class="entity-name list-group-item-heading">No data</h4>
+                  <p></p>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <!-- END   entity-name list -->
+        </div>
+      </section>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

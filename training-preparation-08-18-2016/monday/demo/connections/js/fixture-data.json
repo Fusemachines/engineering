@@ -1,0 +1,34 @@
+{
+  "data": [{
+    "type": "entities",
+    "id": "entity-1",
+    "attributes": {
+      "text": "roji@fusemachines.com",
+      "properties": [{
+          "category": "row",
+          "name": "3"
+        }, {
+          "category": "column",
+          "name": "Email"
+        }, {
+          "category": "validity",
+          "name": "accept-all"
+        }]
+    },
+    "relationships": {
+      "connections": {
+        "data": [{
+          "type": "connections", "id": "connection-1"
+        }]
+      }
+    }
+  }],
+  "included": [{
+      "type": "connections",
+      "id": "connection-1",
+      "attributes": {
+        "path": "column",
+        "entities": ["shirshak@fusemachines.com", "anup@fusemachines.com"]
+      }
+    }]
+}
