@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ember Testing</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Suman Kunwar">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" />
+		<link rel="stylesheet" href="css/reveal.min.css" />
+		<link rel="stylesheet" id="theme" href="css/theme/beige.css" />
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style type="text/css">
+			pre { box-shadow: 0 0 !important; }
+			code { box-shadow: 0 0 6px rgba(0, 0, 0, .3);  }
+		</style>
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<style>
+			.elgreg-slides img {
+				max-width: 50%;
+			}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h1> Javascript for the web </h1>
+						<p> Day 1 </p>
+					</section>
+					<section>
+						<h2>About the Speaker</h2>
+						<div>
+							<ul>
+								<li> Marcellin Nshimiyimana </li>
+							 <ul >
+								<li> 
+									Software Engineer @
+									<a href="http://fusemachines.com/">Fusemachines </a>
+								</li>
+							</ul>
+
+							</ul>
+							<div style="text-align: left;">
+								<br />
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h2 title="why should you write tests">
+					 prerequisite
+					</h2>
+					<ul>
+						<li> HTML5 </li>
+						<li> Some Javascript </li>
+						<li> Some JQuery </li>
+					</ul>
+					<p><strong>Note</strong>: This is <strong>not</strong> a beginner's tutorial</p>
+				</section>
+				<section>
+					<h2 title="why should you write tests">
+					 content
+					</h2>
+					<ul>
+						<li> Development tools </li>
+						<li> Javascript basics - ES6 </li>
+						<li> jQuery </li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2 title="why should you write tests">
+						 Development tools
+						</h2>
+						<ul>
+							<li> Code editor </li>
+							<li> Testing environment </li>
+							<li> ES6 transpiler </li>
+							<li> Git and Git Server </li>
+						</ul>
+					</section>
+					<section>
+						<h2>
+							Tools used in this training
+						</h2>
+						<ul>
+							<li><a href="">Atom</a> for code editing.</li>
+							<li><a href="https://www.google.com/chrome/">Chrome browser</a> and <a href="https://repl.it">REPL</a> for testing the application. </li>
+							<li><a href="https://babeljs.io/">Babel JS</a> for transpiling the code.</li>
+							<li> <a href="http://commitizen.github.io/cz-cli/">Commitizen</a> and <a href="https://repl.it">GitLab</a> for committing changes and securely storing our code.</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>
+						Javascript basics - ES6
+					</h2>
+					<ul>
+						<li> Comments </li>
+						<li> Variables </li>
+						<li> Data Types </li>
+						<li> Functions </li>
+						<li> Objects </li>
+						<li> Arrays </li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>
+					 ECMAScript 6
+					</h2>
+					<p>
+						<a href="http://www.ecma-international.org/ecma-262/6.0/">ECMAScript</a> 
+						is a Standard for scripting languages.
+					</p>
+					<p>
+						<a href="https://www.javascript.com">Javascript</a> 
+						is language that implements ECMAScript standard
+					</p>
+				</section>
+				<section>
+					<h5>
+						Comments
+					</h5>
+					<pre><code class="javascript">
+...
+// prevent outsiders from adding or removing topics
+Object.freeze(this.subscribers);
+...
+					</code></pre>
+				</section>
+				<section>
+					<h2>
+						Variables
+					</h2>
+					<p>
+						A variable is a named container for a value.
+					</p>
+					<pre><code>
+window.CONNECTIONS_MANAGER = ($ => {
+
+...
+  // CONNECTIONS, parent, and searchUrl are variables
+  const parent = CONNECTIONS.APP_EL;
+  let searchUrl = CONNECTIONS.SEARCH_URL;
+...
+
+  })(jQuery);
+}
+					</code></pre>
+				</section>
+
+				<section>
+				<section>
+					<h5>
+						Scope, Hoisting, Closure
+					</h5>
+					<pre><code class="javascript">
+window.CONNECTIONS_MANAGER = ($ => {
+
+...
+  // CONNECTIONS => globally scoped variable
+  // parent => locally scoped variable
+  // searchUrl => locally scoped variable
+  const parent = CONNECTIONS.APP_EL;
+  let searchUrl = CONNECTIONS.SEARCH_URL;
+
+...
+
+})(jQuery);
+					</code></pre>
+				</section>
+				<section>
+					<h1>
+						Definitions
+					</h1>
+					<p>A scope of a variable is a named container for a value.</p>
+					<p>A variable is always hoisted (declared at the begining of its scope)</p>
+					<p>A closure is an environment to resolve free variables.</p>
+
+				</section>
+				</section>
+
+
+				<section>
+				<section>
+					<h5>
+						Data Types
+					</h5>
+					<pre><code>// 6 primitives types
+// undefined
+// null
+// isEntity => Boolean 
+let isEntity = source.hasClass('connected-entity');
+// len => Number
+let len = source.length;
+ // query => String
+let query = 'info@fusemachines.com';
+// _data => Symbol, Symbol type is new in ES6
+let _data = Symbol("_data");
+// entityManager => Object, Objects are not primitives
+let entityManager = new CONNECTIONS.EntityManager(entityEl);
+ 
+					</code></pre>
+					<p>
+						<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Data_structures">Mozilla</a>: 
+						All types except objects define immutable values<br>
+					</p>
+					<p>
+						<strong>Meaning</strong>: It is impossible to modify their internal state. 
+					</p>
+				</section>
+				<section>
+					<h5>
+						immutable
+					</h5>
+					<pre><code>// String values are immutable
+
+let title = "conneted";  
+typeof title // => string
+title[0] // => c
+Object.keys(title) // => [ '0', '1', '2', '3', '4', '5', '6', '7' ]
+Object.getOwnPropertyDescriptor(title, '0'); 
+// => { value: 'c', writable: false, enumerable: true,configurable: false }
+ 
+					</code></pre>
+					<pre><code>// Object values are mutable
+
+let title = "conneted";  
+title = title.split('');
+typeof title // => object
+title[0] // => c
+Object.keys(title) // => [ '0', '1', '2', '3', '4', '5', '6', '7' ]
+Object.getOwnPropertyDescriptor(title, '0'); 
+// => { value: 'c', writable: true, enumerable: true,configurable: false }
+ 
+					</code></pre>
+
+					<p>NOTE the value of <strong>writable</strong> attribute</p>
+
+				</section>
+				</section>
+
+				<section>
+					<h2>
+						Objects
+					</h2>
+					<p>
+						An object is a collection of properties
+					</p>
+					<pre><code>
+// entityBehavior object has 2 attributes
+let entityBehavior = {
+  category: 'validity',
+  name: 'accept-all'
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>
+						Object keyword
+					</h2>
+					<pre><code>
+// entityBehavior object has 2 attributes
+let entityBehavior = {
+  category: 'validity',
+  name: 'accept-all'
+}
+// make attribute immutable
+Object.defineProperty(entityBehavior, 'category', {
+	writable: false
+})
+entityBehavior.category = 'wrong';
+entityBehavior.category; // => validity
+Object.freeze(entityBehavior); // make object immutable
+Object.keys(entityBehavior); // => [ 'category', 'name' ]
+Object.assign({}, entityBehavior, {id: 1}); // => new object with 'id' attribute
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>
+						Functions and ES6 classes
+					</h2>
+					<ul>
+						<li>A Funtions is a callable object.</li>
+						<li>Function declarations are hoisted</li>
+						<li>Functions can be used to create objects</li>
+					</ul>
+				</section>
+
+				<section>
+					<h5>
+						circular reference
+					</h5>
+					<pre><code>  // consequence of hoisting
+// this will cause a RangeError during runtime
+chicken();
+
+function chicken() {
+  return egg();
+}
+function egg() {
+  return chicken();
+}
+					</code></pre>
+				</section>
+				<section>
+				<section>
+					<h5>
+						Creating Objects from function
+					</h5>
+					<pre><code>
+function Entity(title) { // Entity function acts as a constructor
+  this.title = title;
+  this._connections = [];
+  this.setConnections = function(value) {
+    this._connections = value;
+  }
+  this.getConnections = function() {
+    return this._connections;
+  } 
+}
+// add a method
+Entity.prototype.addConnection = function(entity) {
+  this.getConnections().push(entity);
+}
+let entity = new Entity("help@fusemachines.com");
+entity instanceof Entity // => true
+entity1.getConnections(); // => []
+					</code></pre>
+				</section>
+				<section>
+					<h5>
+						Creating Objects from function
+					</h5>
+					<pre><code> // ES6 allows you to write this
+class Entity {
+  constructor(title) {
+    this.title = title;
+    this._connections = [];
+  }
+  set connections(value) {
+    this._connections = value;
+  } 
+  get connections() {
+    return this._connections;
+  }
+  addConnection(entity) {
+    this.connections.push(entity);
+  }
+}
+let entity = new Entity("help@fusemachines.com");
+entity instanceof Entity // => true
+entity1.connections; // => []
+					</code></pre>
+				</section>
+				</section>
+
+				<section>
+					<h2>
+						Arrays
+					</h2>
+					<p>
+						An Array is an object with numbers as property keys
+					</p>
+					<pre><code>
+// entities array holds two elements
+let entities = [ 'roji@fusemachines.com', 'arjun@fusemachines.com' ];
+Object.keys(entities); // => [ '0', '1' ]
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>
+						Array Manipulation
+					</h2>
+					<pre><code>// a few userful functons
+// map: 
+// forEach: perfom an operation on all elements of the array
+this.subscribers[eventType].forEach(subscriber => {
+  subscriber.notify(event, data);
+});
+// filter:
+// find: find an object using a known attributes
+let connectedEntitiesObject = included.find(e => e.id === relationship);
+// sort: 
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>
+						<a href="https://jquery.com/">jQuery</a>
+					</h2>
+					<ul>
+						<li> jQuery is a JavaScript library. </li>
+						<li> It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler. </li>
+						<li> jQuery is cross browser compatible. </li>
+					</ul>
+				</section>
+
+				<section>
+				<section>
+					<h5>
+						DOM Manipulation
+					</h5>
+					<p>
+						Logical representation of the web page inside a browser window.
+					</p>
+					<pre><code>
+let $propertyEl = $(`
+  &lt;li class="list-group-item"&gt;
+    &lt;span class="property-category"&gt;${propertyObject.category}&lt;/span&gt; :
+    &lt;span class="property-name"&gt;${propertyObject.name}&lt;/span&gt;
+  &lt;/li&gt;;
+`);
+					</code></pre>
+				</section>
+				<section>
+					<h5>
+						DOM Manipulation
+					</h5>
+					<pre><code>// one way to create DOM elements
+let propertyEl = document.createElement('li');
+propertyEl.classList.add('list-group-item');
+
+let ctgEl = document.createElement('span');
+ctgEl.classList.add('property-category');
+let ctgText = document.createTextNode(propertyObject.category);
+ctgEl.appendChild(ctgText);
+
+let nEl = document.createElement('span');
+nEl.classList.add('property-name');
+let nText = document.createTextNode(propertyObject.name);
+nEl.appendChild(nText);
+
+propertyEl.appendChild(ctgEl);
+propertyEl.appendChild(nEl);
+					</code></pre>
+				</section>
+				</section>
+
+
+				<section>
+					<h2>
+						Events, Callback, and Promises
+					</h2>
+					<ul>
+						<li> Events are things that happen to Objects </li>
+						<li> Events make JavaScript Asynchronous </li>
+						<li> Callbacks are used to respond to events </li>
+						<li> Promises provide an new and easy way to write Asynchronous code </li>
+					</ul>
+				</section>
+
+				<section>
+				<section>
+					<h2>
+						jQuery Events 
+					</h2>
+					<pre><code>
+$connectionNamesEl
+  .off('click')
+  .on('click', '.load-more-class', connectionObject, function(event) {
+  event.preventDefault();
+  // event.data = connectionObject
+  console.log('load more', event, event.data, arguments);
+});
+// on(event, selector, data, handler)
+					</code></pre>
+				</section>
+				<section>
+					<h2>
+						JavaScript Events 
+					</h2>
+					<pre><code>
+...
+this.connectionNamesEl.removeEventListener('click', this.searchAgain, true);
+this.connectionNamesEl.addEventListener('click', this.searchAgain, true);
+...
+// addEventListener(event, handler, useCapture);
+// Note that removeEventListener requires both the event and the handler
+					</code></pre>
+				</section>
+				</section>
+
+				<section>
+					<h2 title="Asynchronous JavaScript and XML">
+						AJAX
+					</h2>
+					<p>
+						<i>mozilla</i>: It is the use of the XMLHttpRequest object to communicate with server-side scripts.
+					</p>
+					<pre><code> // request data from a server
+makeRequest(url) {
+  // promise provides a function (then) that execute user's code 
+  // whenever either resolve or reject is called
+  return new Promise((resolve, reject) => {
+    let httpRequest = new XMLHttpRequest();
+
+    // readystatechange is an event
+    // onreadystatechange is the callback function
+    httpRequest.onreadystatechange = ({currentTarget, target}) => {
+
+      resolve(JSON.parse(httpRequest.responseText || '{}'));
+
+    };
+    httpRequest.open('GET', url);
+    httpRequest.send();
+
+  });
+} 
+// NOTE that XMLHttpRequest does not work on some browsers.
+// so it is better to use jQuery.ajax instead!
+					</code></pre>
+				</section>
+
+
+				<section>
+					<h2> Resource </h2>
+					<ul>
+						<li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla</a> </li>
+						<li> <a href="https://gitbookio.gitbooks.io/javascript/content/index.html">Learn Javascript</a> </li>
+						<li> <a href="https://github.com/lukehoban/es6features"> ES6 Features</a> </li>
+						<li> <a href="http://www.ecma-international.org/ecma-262/6.0/">ECMAScript</a> </li>
+						<li> <a href="http://www.tutorialspoint.com/javascript/javascript_html_dom.htm">DOM explained</a> </li>
+					</ul>
+				</section>
+
+				<section>
+					<h1> Questions ? </h1>
+				</section>
+
+				<section>
+					<h2>
+						Exercises
+					</h2>
+					<ol>
+						<li> Individual: Setting up the development environment. </li>
+						<li> Group: create index.html file. </li>
+						<li> Individual: Use commitizen to commit the code. </li>
+						<li> Individual: Write Javascript code that fetches and displays the data.</li>
+					</ol>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -38,7 +38,6 @@ window.CONNECTIONS = (_ => {
     }
 
     trigger(eventName, data) {
-      console.log(arguments);
       this.LISTENERS[eventName].call(this, data);
     }
 
@@ -72,7 +71,6 @@ window.CONNECTIONS = (_ => {
     * @param entiyObject
     */
     updateEntityView(entiyObject) {
-      console.log(arguments);
       let $entityNameEl = $(this.entityNameEl);
       let $entityPropertiesEl = $(this.entityPropertiesEl);
 
@@ -100,8 +98,8 @@ window.CONNECTIONS = (_ => {
     */
     class ConnectionManager {
       /**
-      * @param connectionObject { }
-      */
+       * @param connectionObject { }
+       */
       constructor(
         connectionsEl,
         connectionObject = { id: 0, path: 'N/A', entities: [] }
@@ -109,10 +107,34 @@ window.CONNECTIONS = (_ => {
         this.connectionsEl = connectionsEl;
         this.connectionNamesEl = connectionsEl.querySelector('.entity-name-list');
 
+        // we need to be able to search using any of the connected entities
+        // this.connectionNamesEl.removeEventListener('click', this.searchAgain.bind(this), true);
+        this.connectionNamesEl.addEventListener('click', this.searchAgain.bind(this), true);
+
         this.noDataText = 'No connected entities provided';
         this.loadMoreText = 'Load more';
 
         this.connectionObject = connectionObject;
+
+        /*
+         * this class manages data provided to it
+         * if user request modification to the data then this class will send
+         * the request to the data owner (SearchManager) so that it can make necessary
+         * modifications then provided updated data to this class.
+         */
+         /*
+          * in order to do that, we use a simple subscription model where
+          * any class can subscribe to provided topics.
+          * then ConnectionManager class will notify them every-time there is work
+          * to be done.
+          * all registered classes must have a "notify" method
+          */
+        this.subscribers = {
+          'search-again': []
+        };
+        // freezing the subscribers object allows us to prevent outsiders from
+        // adding or removing topics
+        Object.freeze(this.subscribers);
       }
 
       set connectionObject(value) {
@@ -132,28 +154,70 @@ window.CONNECTIONS = (_ => {
       * @param entiyObject
       */
       updateEntityView(connectionObject) {
-        console.log(arguments);
         let $connectionNamesEl = $(this.connectionNamesEl);
 
         // show entity names
         $connectionNamesEl.html('');
         connectionObject.entities.forEach(connectionEntityName => {
           let $connectionEntityEl = $(`
-            <a href="#" class="list-group-item">
+            <a href="#" class="connected-entity list-group-item" data-search-value="${connectionEntityName}">
             <h4 class="entity-name list-group-item-heading">${connectionEntityName}</h4>
             <p>connected through the ${connectionObject.path}</p>
             </a>
             `);
             $connectionNamesEl.append($connectionEntityEl);
+
           });
 
+          // connection list may be long so we paginate the list and allow users
+          // to request more if they are interested
           let $connectionEntityEl = $(`
-            <a href="#" class="list-group-item">
+            <a href="#" class="load-more-class list-group-item">
             <h4 class="entity-name list-group-item-heading">${(connectionObject.entities.length > 0)? this.loadMoreText: this.noDataText}</h4>
             </a>
             `);
             $connectionNamesEl.append($connectionEntityEl);
+            // debugger;
+            // when event is triggered, the function runs twice
+            $connectionNamesEl.off('click').on('click', '.load-more-class', connectionObject, function(event) {
+              event.preventDefault();
+              console.log('load more', event, event.data, arguments);
+            });
 
+          }
+          /**
+           * This class does not have the right to search
+           * so it tells the search manager to do it\
+           */
+          searchAgain(event) {
+            event.preventDefault();
+            // console.log('search again', this, event, event.target, arguments);
+            // argument for "search-again" topic is { source: {}, query: string }
+            let query;
+            let source = $(event.target);
+            if (source.hasClass('connected-entity')) {
+              query = source.data('searchValue');
+            } else {
+              source = source.parents('.connected-entity');
+              if (source.length === 1) {
+                query = source.data('searchValue');
+              }
+            }
+            if (query) {
+              this.notifyAll('search-again', event, { source, query });
+            }
+          }
+          /**
+           * @TODO is it possible to send different data to different subscribers
+           * @param eventData
+           */
+          notifyAll(eventType, event, data) {
+            this.subscribers[eventType].forEach(subscriber => {
+              subscriber.notify(event, data);
+            });
+          }
+          subscribe(eventType, subscriber) {
+            this.subscribers[eventType].push(subscriber) ;
           }
 
         }
@@ -167,6 +231,7 @@ window.CONNECTIONS = (_ => {
         */
         class DataManager {
           constructor() {
+            this.httpRequest = new XMLHttpRequest();
 
           }
 
@@ -176,8 +241,8 @@ window.CONNECTIONS = (_ => {
           */
           makeRequest(url) {
             return new Promise((resolve, reject) => {
+              let httpRequest = this.httpRequest;
 
-              let httpRequest = new XMLHttpRequest();
               if (!httpRequest) {
                 reject({ message: 'httpRequest is not available' });
                 return false;
@@ -201,10 +266,11 @@ window.CONNECTIONS = (_ => {
         }
 
         /**
-        * handling everything related to search
-        * and updating view once search data is available
-        * - it uses DataManager internally
-        */
+         * handling everything related to search
+         * and updating view once search data is available
+         * this class is the data owner (all data modification logic is done in here)
+         * - it uses DataManager internally
+         */
         class SearchManager {
           constructor(
             searchForm,
@@ -225,25 +291,58 @@ window.CONNECTIONS = (_ => {
 
           initialize() {
             let $form = $(this.searchForm);
-            $form.on('submit', this.searchData.bind(this));
+            // make sure only one submit event is registered
+            $form.off('submit').on('submit', this.searchDataHandler.bind(this));
+            this.connectionManager.subscribe('search-again', this);
+          }
+          /**
+           * this method is required by connectionManager subscription system
+           * @TODO how does the subscription system know what kind of data to send during notification process?
+           * @param searchInput { source: {}, query: string }
+           */
+          notify(event, searchInput) {
+            // console.log('hi there notify notify notify', event, searchInput);
+            let $form = $(this.searchForm);
+            $form.find('input[name="entity-search-box"]').val(searchInput.query);
+            $form.trigger('submit');
           }
 
-          searchData(evt) {
-            evt.preventDefault();
-            console.log('searchData', arguments, evt.target);
-            this.dataManager.makeRequest(this.searchUrl)
+          set data(value) {
+            this._data = value;
+          }
+          get data() {
+            return this._data;
+          }
+
+          searchData(inputData) {
+            console.log('searchData', inputData);
+            // let url = `${this.searchUrl}?q=${inputData.query}`
+            let url = this.searchUrl;
+            this.dataManager.makeRequest(url)
             .then(({ data, included }) => {
               console.log('entities', data, included);
               let entity = data[0];
               let relationship =  entity.relationships.connections.data[0].id;
               let connectedEntitiesObject = included.find(e => e.id === relationship);
               let id = connectedEntitiesObject.id;
-              console.log('after parsing', entity, relationship, connectedEntitiesObject, Object.assign({}, connectedEntitiesObject.attributes, {id}));
+              let connections = Object.assign({}, connectedEntitiesObject.attributes, { id });
+              console.log('after parsing', entity, relationship, connectedEntitiesObject, connections);
               this.entityManager.entiyObject = entity;
-              this.connectionManager.connectionObject = Object.assign({}, connectedEntitiesObject.attributes, connectedEntitiesObject.id);
+              this.connectionManager.connectionObject = connections;
+
+              this.data = { entity, connections };
 
             });
 
+          }
+          searchDataHandler(evt) {
+            evt.preventDefault();
+            let source = $(evt.target);
+            let query = source.find('input[name="entity-search-box"]').val();
+            console.log('searchDataHandler', arguments, evt.target, query);
+            if (query) {
+              this.searchData({ source, query });
+            }
           }
         }
 
