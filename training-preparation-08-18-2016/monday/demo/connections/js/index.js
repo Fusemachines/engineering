@@ -179,9 +179,10 @@ window.CONNECTIONS = (_ => {
             $connectionNamesEl.append($connectionEntityEl);
             // debugger;
             // when event is triggered, the function runs twice
-            $connectionNamesEl.off('click').on('click', '.load-more-class', connectionObject, function(event) {
+
+            $connectionNamesEl.off('click').on('click', '.load-more-class', connectionObject, (event) => {
               event.preventDefault();
-              console.log('load more', event, event.data, arguments);
+              console.log('load more', event, event.data, arguments, this);
             });
 
           }
