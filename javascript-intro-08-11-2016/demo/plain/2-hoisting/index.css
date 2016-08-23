@@ -1,0 +1,13 @@
+body {
+	position: relative;
+}
+.box {
+	border: 1px solid black;
+	width: 30%;
+	float: left;
+}
+
+.box-element {
+	border-bottom: 1px solid black;
+	padding-bottom: 5px;
+}

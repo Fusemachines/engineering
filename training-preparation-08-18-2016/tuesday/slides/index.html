@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ember Testing</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Suman Kunwar">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" />
+		<link rel="stylesheet" href="css/reveal.min.css" />
+		<link rel="stylesheet" id="theme" href="css/theme/beige.css" />
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style type="text/css">
+			pre { box-shadow: 0 0 !important; }
+			code { box-shadow: 0 0 6px rgba(0, 0, 0, .3);  }
+		</style>
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<style>
+			.elgreg-slides img {
+				max-width: 50%;
+			}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h1> Javascript for the web </h1>
+						<p> Day 2 </p>
+					</section>
+					<section>
+						<h2>About the Speaker</h2>
+						<div>
+							<ul>
+								<li> Marcellin Nshimiyimana </li>
+							 <ul >
+								<li> 
+									Software Engineer @
+									<a href="http://fusemachines.com/">Fusemachines </a>
+								</li>
+							</ul>
+
+							</ul>
+							<div style="text-align: left;">
+								<br />
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h2 title="why should you write tests">
+					 prerequisite
+					</h2>
+					<ul>
+						<li> Some Javascript </li>
+						<li> Some JQuery </li>
+						<li> ES6 </li>
+					</ul>
+				</section>
+				<section>
+					<h2 title="why should you write tests">
+					 content
+					</h2>
+					<ul>
+						<li> Node js and npm </li>
+						<li> Bower </li>
+						<li> Ember cli </li>
+						<li> Ember basic - part 1 </li>
+					</ul>
+				</section>
+				<section>
+						<h2 title="why should you write tests">
+						 Node js and npm
+						</h2>
+						<ul>
+							<li> Node js allow us to run ember cli commands </li>
+							<li> npm is the node package manager. </li>
+						</ul>
+				</section>
+				<section>
+					<h2>
+						package version
+					</h2>
+					<img src="images/versioning.png" alt="version picking">
+					</section>
+
+				<section>
+					<h2>
+						Bower
+					</h2>
+					<p> Web assets package manager </p>
+				</section>
+
+				<section>
+					<h2>
+						Ember cli
+					</h2>
+					<p>
+						Utility package for testing and deploying ember applications
+					</p>
+				</section>
+
+				<section>
+					<h2>
+						Ember basic - part 1
+					</h2>
+					<ul>
+						<li> Coding by convention </li>
+						<li> app structure </li>
+						<li> Routes </li>
+						<li> Data ownership / DDAU </li>
+					</ul>
+				</section>
+				<section>
+					<h2>
+						Coding by convention
+					</h2>
+					<p>
+						Why we use Ember at 
+						<a href="http://fusemachines.com">Fusemachines</a>
+					</p>
+					<p>
+						<a href="https://en.wikipedia.org/wiki/Convention_over_configuration">wiki</a>
+						Convention over configuration (also known as coding by convention) is a software design paradigm used by software frameworks that attempt to decrease the number of decisions that a developer using the framework is required to make without necessarily losing flexibility.
+					</p>
+				</section>
+				<section>
+					<h2>
+						app structure
+					</h2>
+				<img src="images/app-structure.png" alt="application structure">
+				</section>
+				<section>
+					<h2>
+						app structure
+					</h2>
+				<img src="images/app-structure-inner.png" alt="application structure">
+				</section>
+				<section>
+				<section>
+					<h2>
+						Why use pods
+					</h2>
+					<p>
+						<a href="http://www.programwitherik.com/ember-pods/">programwitherik: </a>
+						Ember pods are a way of structuring your project by feature, instead of type.
+					</p>
+				</section>
+				<section>
+					<h5>
+						Why use pods
+					</h5>
+				<img src="images/pod-structure.png" alt="application structure">
+				</section>
+				</section>
+				<section>
+					<h5>
+						Routes and their handlers
+					</h5>
+					<img src="https://guides.emberjs.com/v2.7.0/images/ember-core-concepts/ember-core-concepts.png" alt="how ember works">
+				</section>
+
+				<section>
+				<section>
+					<h2>
+						Data ownership / DDAU
+					</h2>
+					<p>Who should modify the data</p>
+					<ul>
+						<li>Route: fetches the data</li>
+						<li>Controller: manipulate the data</li>
+						<li>Component: present the data</li>
+						<li>
+							<a href="https://emberway.io/ember-js-goodbye-mvc-part-1-21777ecfd708#.kx76hp2lc">
+								Good article by Lauren Tan
+							</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h5>
+						Data ownership / DDAU
+					</h5>
+					<img src="https://cdn-images-1.medium.com/max/1200/1*MjgBefc-yauK1zWrtCX1Bg.png" alt="data-down-action-up">
+				</section>
+				</section>
+				<section>
+					<h2> Resource </h2>
+					<ul>
+						<li> <a href="https://npmjs.com/"> npm </a> </li>
+						<li> <a href="https://bower.io/"> Bower </a> </li>
+						<li> <a href="https://ember-cli.com/">Ember cli</a> </li>
+						<li> <a href="https://guides.emberjs.com/v2.7.0/">Ember js</a> </li>
+					</ul>
+				</section>
+
+				<section>
+					<h1> Questions ? </h1>
+				</section>
+
+				<section>
+					<h2>
+						Exercises
+					</h2>
+					<ol>
+						<li> Individual: Turn your project done in Day 1, into an Ember app. </li>
+					</ol>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
