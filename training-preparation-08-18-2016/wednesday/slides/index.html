@@ -49,7 +49,7 @@
 				<section>
 					<section>
 						<h1> Javascript for the web </h1>
-						<p> Day 2 </p>
+						<p> Day 3 </p>
 					</section>
 					<section>
 						<h2>About the Speaker</h2>
@@ -85,136 +85,149 @@
 					 content
 					</h2>
 					<ul>
-						<li> Node js and npm </li>
-						<li> Bower </li>
-						<li> Ember cli </li>
-						<li> Ember basic - part 1 </li>
+						<li> Emberjs ddons </li>
+						<li> How to use them </li>
+						<li> How to debug them </li>
+						<li> Example - Ember-changeset-validations </li>
 					</ul>
 				</section>
 				<section>
 						<h2 title="why should you write tests">
-						 Node js and npm
+						 Emberjs addons
 						</h2>
-						<ul>
-							<li> Node js allow us to run ember cli commands </li>
-							<li> npm is the node package manager. </li>
-						</ul>
-				</section>
-				<section>
-					<h2>
-						package version
-					</h2>
-					<img src="images/versioning.png" alt="version picking">
-					</section>
-
-				<section>
-					<h2>
-						Bower
-					</h2>
-					<p> Web assets package manager </p>
-				</section>
-
-				<section>
-					<h2>
-						Ember cli
-					</h2>
-					<p>
-						Utility package for testing and deploying ember applications
-					</p>
-				</section>
-
-				<section>
-					<h2>
-						Ember basic - part 1
-					</h2>
-					<ul>
-						<li> Coding by convention </li>
-						<li> app structure </li>
-						<li> Routes </li>
-						<li> Data ownership / DDAU </li>
-					</ul>
-				</section>
-				<section>
-					<h2>
-						Coding by convention
-					</h2>
-					<p>
-						Why we use Ember at 
-						<a href="http://fusemachines.com">Fusemachines</a>
-					</p>
-					<p>
-						<a href="https://en.wikipedia.org/wiki/Convention_over_configuration">wiki</a>
-						Convention over configuration (also known as coding by convention) is a software design paradigm used by software frameworks that attempt to decrease the number of decisions that a developer using the framework is required to make without necessarily losing flexibility.
-					</p>
-				</section>
-				<section>
-					<h2>
-						app structure
-					</h2>
-				<img src="images/app-structure.png" alt="application structure">
-				</section>
-				<section>
-					<h2>
-						app structure
-					</h2>
-				<img src="images/app-structure-inner.png" alt="application structure">
-				</section>
-				<section>
-				<section>
-					<h2>
-						Why use pods
-					</h2>
-					<p>
-						<a href="http://www.programwitherik.com/ember-pods/">programwitherik: </a>
-						Ember pods are a way of structuring your project by feature, instead of type.
-					</p>
-				</section>
-				<section>
-					<h5>
-						Why use pods
-					</h5>
-				<img src="images/pod-structure.png" alt="application structure">
-				</section>
-				</section>
-				<section>
-					<h5>
-						Routes and their handlers
-					</h5>
-					<img src="https://guides.emberjs.com/v2.7.0/images/ember-core-concepts/ember-core-concepts.png" alt="how ember works">
-				</section>
-
-				<section>
-				<section>
-					<h2>
-						Data ownership / DDAU
-					</h2>
-					<p>Who should modify the data</p>
-					<ul>
-						<li>Route: fetches the data</li>
-						<li>Controller: manipulate the data</li>
-						<li>Component: present the data</li>
-						<li>
-							<a href="https://emberway.io/ember-js-goodbye-mvc-part-1-21777ecfd708#.kx76hp2lc">
-								Good article by Lauren Tan
+						<p>
+							Reusable emberjs libraries.
+						</p>
+						<p>
+							<a href="https://dockyard.com/blog/2014/06/24/introducing_ember_cli_addons">
+								Good article
 							</a>
+						</p>
+						<p>
+							They are merged into your project during build process
+						</p>
+				</section>
+
+				<section>
+					<h2>
+						How to use them
+					</h2>
+					<ul>
+						<li>
+							Ember install &lt;addon-name&gt;
+						</li>
+						<li>
+							Tests are good documentation! 
+						</li>
+					</ul>
+					
+				</section>
+
+				<section>
+					<h2>
+						How to debug them
+					</h2>
+					<p>
+						Look at the code
+					</p>
+				</section>
+
+				<section>
+					<h4>
+						Example - Ember-changeset-validations
+					</h4>
+					<ul>
+						<li>
+							Easy way to validate user's input data
+						</li>
+						<li>
+							Provide an easy way to write DDAU based code
 						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h5>
-						Data ownership / DDAU
-					</h5>
-					<img src="https://cdn-images-1.medium.com/max/1200/1*MjgBefc-yauK1zWrtCX1Bg.png" alt="data-down-action-up">
+					<h4>
+						Ember-changeset-validations
+					</h4>
+					<pre><code>
+# install addon in your project
+ember install ember-changeset-validations
+					</code></pre>
+				</section>
+
+				<section>
+					<h4>
+						Ember-changeset-validations
+					</h4>
+					<pre><code>
+# create a validator
+ember g validator entity-name
+					</code></pre>
+					<pre><code>// contect of entity-name validator
+export default function validateEntityName(options = {}) {
+	
+  let { errorMessage = 'Invalid entity name' } = options;
+  return (key, newValue, oldValue, changes) => {	
+    let dot = newValue.indexOf('\\.') === 0,
+    slash = newValue.indexOf('/') === 0;
+
+    if (dot || slash) {
+      return errorMessage;
+    } else {
+        return true;
+    }
+  };
+}
+					</code></pre>
+				</section>
+				<section>
+					<h4>
+						Ember-changeset-validations
+					</h4>
+					<pre><code>
+# create a validation
+mkdir -p app/validations && touch app/validations/entity.js
+					</code></pre>
+
+					<pre><code>// content of entity validation
+import {
+  validatePresence 
+} from 'ember-changeset-validations/validators';
+
+import validateEntityName from '../validators/entity-name';
+export default {
+  text: [
+    validatePresence(true),
+    validateEntityName({ errorMessage: 'Please provide a valid name' })
+  ]
+};
+					</code></pre>
+				</section>
+
+				<section>
+				<section>
+					<h4>
+						Ember-changeset-validations
+					</h4>
+					<img src="images/changeset-variable.png" alt="ember changeset">
+					<img src="images/ember-changeset-action.png">
+				</section>
+				<section>
+					<h4>
+						Ember-changeset-validations
+					</h4>
+					<p>
+						use the changeset object to pass data between route/controller and component
+					</p>
 				</section>
 				</section>
+
 				<section>
 					<h2> Resource </h2>
 					<ul>
-						<li> <a href="https://npmjs.com/"> npm </a> </li>
-						<li> <a href="https://bower.io/"> Bower </a> </li>
-						<li> <a href="https://ember-cli.com/">Ember cli</a> </li>
-						<li> <a href="https://guides.emberjs.com/v2.7.0/">Ember js</a> </li>
+						<li> <a href="https://dockyard.com/blog/2014/06/24/introducing_ember_cli_addons">Ember addons tutorial</a> </li>
+						<li> <a href="https://github.com/DockYard/ember-changeset"> Ember changeset </a> </li>
 					</ul>
 				</section>
 

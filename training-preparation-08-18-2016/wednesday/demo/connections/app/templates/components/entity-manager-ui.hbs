@@ -1,0 +1,50 @@
+<div class="col-md-12">
+  <!-- START search input box -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entity-search input-group" style="margin-bottom: 1em;">
+        {{input 
+          type="text"  
+          name="entity-search-box" 
+          class="form-control" 
+          placeholder="Name of the entity" 
+          value=entityChangeset.text
+          enter=(action 'sendSeachValue')
+        }}
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" 
+            {{action 'sendSeachValue' entityChangeset.text}}>GO</button>
+        </span>
+      </div>
+      <span class="cd-error-message is-visible">
+        invalid error
+      </span>
+    </div>
+  </div>
+  <!-- END   search input box -->
+
+  <!-- START property list -->
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="entity-body panel panel-default">
+        <!-- Default panel contents -->
+        <!-- <div class="panel-heading">Panel heading</div> -->
+        <div class="entity-name panel-body">
+          <p>{{entity.text}}</p>
+        </div>
+
+        <!-- List group -->
+        <ul class="entity-propert-list list-group">
+          {{#each entity.properties as | property index |}}
+            <li class="list-group-item">
+              <span class="property-category">{{property.category}}</span> : 
+              <span class="property-name">{{property.name}}</span>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END   property list -->
+</div>
