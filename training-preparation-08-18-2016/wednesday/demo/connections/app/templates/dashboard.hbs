@@ -1,0 +1,23 @@
+<div id="application" class="container">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class=" navbar-left">
+        <ul class="nav navbar-nav">
+          <li><a href="#">HOME</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <br>
+  <br>
+    {{entity-manager-ui
+      entity=entity
+      entityChangeset=(changeset inputHolder EntityValidation)
+      search-action='customSearchEntities'
+    }}
+  <hr>
+    {{connection-list-manager-ui
+      connection=entity.firstConnection
+      search-again-action='searchEntities'
+    }}
+</div>

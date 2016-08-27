@@ -105,6 +105,9 @@
 						package version
 					</h2>
 					<img src="images/versioning.png" alt="version picking">
+					<p>
+						Ember cli is always "exact"
+					</p>
 					</section>
 
 				<section>
@@ -132,6 +135,9 @@
 						<li> app structure </li>
 						<li> Routes </li>
 						<li> Data ownership / DDAU </li>
+						<li> Component vs helper </li>
+						<li> Data binding </li>
+						<li> Computed vs observed properties </li>
 					</ul>
 				</section>
 				<section>
@@ -208,6 +214,100 @@
 					<img src="https://cdn-images-1.medium.com/max/1200/1*MjgBefc-yauK1zWrtCX1Bg.png" alt="data-down-action-up">
 				</section>
 				</section>
+
+				<section>
+				<section>
+					<h2>
+						Component vs helper
+					</h2>
+					<ul>
+						<li>
+							They are used inside template
+						</li>
+						<li>
+							They are called/ran in the same manner.
+						</li>
+						<li>
+							What happens if you have a component and helper with same name?
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>
+						Component vs helper
+					</h2>
+					<p>
+						<a href="http://emberjs.com/api/classes/Ember.Component.html">
+							Emberjs:
+						</a>
+						An Ember.Component is a view that is completely isolated
+					</p>
+					<p>
+						<a href="http://emberjs.com/api/classes/Ember.Helper.html">
+							Emberjs:
+						</a>
+						Ember Helpers are functions that can compute values
+					</p>
+					<p>What can go wrong?</p>
+				</section>
+				</section>
+
+				<section>
+					<h2>
+						 Helpers 
+					</h2>
+					<p>
+						What if promises are involved?
+					</p>
+					<p>
+						<a href="https://ember-twiddle.com/f4d352d8158d8d873e7c6e4efca62e14">
+							sample code
+						</a>
+					</p>
+				</section>
+
+
+				<section>
+					<h2>
+						Data binding
+					</h2>
+					<p>
+						<a href="http://www.programwitherik.com/ember-pods/"> Emberjs: </a>
+						A binding is a link between two properties
+					</p>
+					<img src="images/ember-binding.png" alt="ember binding">
+				</section>
+
+				<section>
+					<h2>
+						Data binding and model definitions
+					</h2>
+					<img src="images/ember-model-binding.png" alt="ember model binding">
+				</section>
+
+				<section>
+					<h3>
+						Computed vs observed properties
+					</h3>
+					<p>
+						Perfom operation when a value assigned to given property changes.
+					</p>
+					<img src="images/table-element-vtwo-addcolumns.png">
+					<img src="images/table-element-vtwo-addrows.png">
+				</section>
+				<section>
+					<h2>
+						Computed vs observed properties
+					</h2>
+					<p>
+						What can go wrong? => 
+						<a href="http://www.programwitherik.com/how-to-use-ember-ember-observers/">
+							Your Answer
+						</a>
+					</p>
+
+				</section>
+
 				<section>
 					<h2> Resource </h2>
 					<ul>
