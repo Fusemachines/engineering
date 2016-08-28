@@ -15,7 +15,6 @@ export default Route.extend({
 	},
 	setupController(controller, model) {
 		this._super(...arguments);
-		debugger;
 		Logger.log('setup-controller', model, model.get('firstObject'));
 		controller.set('entity', model.get('firstObject'));
 		Logger.log('setup-controller', model.get('firstObject'));
@@ -38,6 +37,7 @@ export default Route.extend({
 					Logger.log('setup-controller', value);
 					this.send('searchEntities', value, this);
 				}
+				debugger;
 			}).catch((error) => {
 				Logger.log('setup-controller', error);
 				return changeset;
