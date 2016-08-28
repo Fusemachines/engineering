@@ -220,6 +220,21 @@ export default {
 					<p>
 						use the changeset object to pass data between route/controller and component
 					</p>
+					<pre><code> // execute = persist the data
+customSearchEntities(changeset, source) {
+  changeset
+  .validate()
+  .then(() => {
+    if (get(changeset, 'isValid')) {
+      changeset.execute(); // change value of entity.text
+      let value = changeset.get('text');
+      this.send('searchEntities', value, this);
+    }
+  }).catch((error) => {
+    Logger.error('setup-controller', error);
+  });
+}
+					</code></pre>
 				</section>
 				</section>
 

@@ -1,7 +1,7 @@
 <div class="col-md-12">
   <!-- START search input box -->
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 cd-form">
       <div class="entity-search input-group" style="margin-bottom: 1em;">
         {{input 
           type="text"  
@@ -16,8 +16,9 @@
             {{action 'sendSeachValue' entityChangeset.text}}>GO</button>
         </span>
       </div>
-      <span class="cd-error-message is-visible">
-        invalid error
+      <span class="cd-error-message 
+        {{if entityChangeset.errors.length 'is-visible'}}">
+        {{entityChangeset.errors.firstObject.validation.firstObject}}
       </span>
     </div>
   </div>
